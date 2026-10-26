@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Super Specialty Hospital - World-class healthcare, 24/7 emergency & Level 1 trauma care, robotic surgery, advanced cardiology, neurology, and renowned specialist doctors.">
+    <meta name="keywords" content="super specialty hospital, emergency hospital, doctors, cardiology, neurology, robotic surgery, orthopedics, oncology, health checkup, hospital appointment">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+    <title>Super Specialty Hospital | Advanced Healthcare & 24/7 Emergency Care</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="assets/images/logo.png" alt="Hospital Logo" width="36" height="44" style="height: 44px; width: auto; object-fit: contain;">
+            </a>
+
+            <nav class="nav-menu" id="siteNavMenu">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Specialties</a>
+                <a href="doctors.html" class="nav-link">Doctors</a>
+                <a href="health-packages.html" class="nav-link">Health Packages</a>
+                <a href="blog.html" class="nav-link">Health Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <div class="nav-actions-mobile">
+                    <a href="signin.html" class="btn btn-signin">Sign In</a>
+                    <a href="get-started.html" class="btn btn-primary">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="signin.html" class="btn btn-signin">Sign In</a>
+                <a href="get-started.html" class="btn btn-primary">
+                    <span>Get Started</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- =========================================================================
+             SECTION 1: HERO SECTION
+             ========================================================================= -->
+        <section class="hero-section">
+            <div class="shape-blob" style="top: -100px; left: -100px;"></div>
+            <div class="shape-blob" style="bottom: -100px; right: -50px; background: radial-gradient(circle, rgba(6, 182, 212, 0.18) 0%, transparent 70%);"></div>
+
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content reveal-left active">
+                        <div class="badge-pill">
+                            <i class="fa-solid fa-shield-heart" style="color: #ef4444;"></i>
+                            <span>#1 Ranked Multi-Specialty Hospital & Research Center</span>
+                        </div>
+                        <h1 class="hero-title">
+                            Compassionate Healthcare Powered By Advanced Medical Science
+                        </h1>
+                        <p class="hero-description">
+                            Our super specialty hospital brings together world-renowned surgeons, 24/7 Level-1 trauma response, robotic-assisted surgical theaters, and comprehensive cardiac, neurological, and cancer therapies.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="get-started.html" class="btn btn-primary btn-lg">
+                                <i class="fa-solid fa-circle-play"></i>
+                                <span>Get Started</span>
+                            </a>
+                            <a href="tel:+919840055500" class="btn btn-outline btn-lg" style="color: #ef4444; border-color: rgba(239,68,68,0.4);">
+                                <i class="fa-solid fa-truck-medical"></i>
+                                <span>24/7 Emergency Desk</span>
+                            </a>
+                        </div>
+
+                        <div class="hero-trust">
+                            <div class="trust-avatars">
+                                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1200&q=88" alt="Doctor Dr. Elena">
+                                <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=1200&q=88" alt="Doctor Dr. Marcus">
+                                <img src="https://images.unsplash.com/photo-1594824813511-583594191630?auto=format&fit=crop&w=1200&q=88" alt="Doctor Dr. Sarah">
+                                <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=1200&q=88" alt="Doctor Dr. Jonathan">
+                            </div>
+                            <div class="trust-text">
+                                <div class="rating-stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p><strong>85,000+ Happy Patients Treated</strong> & 99.4% Clinical Recovery Rate</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual reveal-right active">
+                        <div class="hero-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=88" alt="Modern Super Specialty Hospital">
+                        </div>
+
+                        <!-- Floating Stat Badge 1 -->
+                        <div class="floating-badge badge-1">
+                            <div class="badge-icon" style="background: rgba(239, 68, 68, 0.15); color: #ef4444;">
+                                <i class="fa-solid fa-truck-medical"></i>
+                            </div>
+                            <div>
+                                <div class="badge-title">24/7 Level-1 Trauma</div>
+                                <div class="badge-sub">Zero Admission Wait Time</div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Stat Badge 2 -->
+                        <div class="floating-badge badge-2">
+                            <div class="badge-icon">
+                                <i class="fa-solid fa-user-doctor"></i>
+                            </div>
+                            <div>
+                                <div class="badge-title">120+ Specialist Doctors</div>
+                                <div class="badge-sub">Harvard & Mayo Clinic Fellows</div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Stat Badge 3 -->
+                        <div class="floating-badge badge-3">
+                            <div class="badge-icon" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">
+                                <i class="fa-solid fa-bed-pulse"></i>
+                            </div>
+                            <div>
+                                <div class="badge-title">150+ Modular ICU Beds</div>
+                                <div class="badge-sub">Advanced HEPA Filtration</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             SECTION 2: 4-PILLAR EMERGENCY & CLINICAL QUICK-ACTION STRIP
+             ========================================================================= -->
+        <section class="section" style="padding-top: 20px; padding-bottom: 50px;">
+            <div class="container">
+                <div class="grid grid-4">
+                    <!-- Action Card 1 -->
+                    <div class="feature-card reveal active">
+                        <div class="feature-icon" style="background: rgba(239,68,68,0.12); color: #ef4444;">
+                            <i class="fa-solid fa-truck-medical"></i>
+                        </div>
+                        <h3>24/7 Emergency Care</h3>
+                        <p>Dedicated Level-1 resuscitation bays, acute stroke triage, and mobile GPS-connected ICU ambulances.</p>
+                        <a href="tel:+919840055500" class="btn btn-outline btn-sm" style="margin-top: 15px; color: #ef4444; border-color: #ef4444;">Call Hotline <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Action Card 2 -->
+                    <div class="feature-card reveal active">
+                        <div class="feature-icon" style="background: rgba(2,132,199,0.12); color: #0284c7;">
+                            <i class="fa-solid fa-user-doctor"></i>
+                        </div>
+                        <h3>Find a Specialist Doctor</h3>
+                        <p>Consult with over 120+ certified senior cardiologists, neurosurgeons, pediatricians, and oncologists.</p>
+                        <a href="get-started.html" class="btn btn-outline btn-sm" style="margin-top: 15px;">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Action Card 3 -->
+                    <div class="feature-card reveal active">
+                        <div class="feature-icon" style="background: rgba(16,185,129,0.12); color: #10b981;">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <h3>Online Appointment</h3>
+                        <p>Book your OPD consultation online instantly with flexible morning, afternoon, or evening time slots.</p>
+                        <a href="get-started.html" class="btn btn-outline btn-sm" style="margin-top: 15px;">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+
+                    <!-- Action Card 4 -->
+                    <div class="feature-card reveal active">
+                        <div class="feature-icon" style="background: rgba(147,51,234,0.12); color: #9333ea;">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <h3>Preventive Health Checkup</h3>
+                        <p>Comprehensive whole-body and cardiac diagnostic packages with same-day reports on your portal.</p>
+                        <a href="health-packages.html" class="btn btn-outline btn-sm" style="margin-top: 15px;">View Packages <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             SECTION 3: HOSPITAL STATISTICS & CLINICAL MILESTONES
+             ========================================================================= -->
+        <section class="section" style="background: var(--bg-alt); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item reveal">
+                        <div class="stat-number"><span class="counter" data-target="120">0</span>+</div>
+                        <div class="stat-label">Specialist Doctors & Surgeons</div>
+                    </div>
+                    <div class="stat-item reveal">
+                        <div class="stat-number"><span class="counter" data-target="85">0</span>k+</div>
+                        <div class="stat-label">Happy Patients Treated</div>
+                    </div>
+                    <div class="stat-item reveal">
+                        <div class="stat-number"><span class="counter" data-target="150">0</span>+</div>
+                        <div class="stat-label">Advanced Modular ICU Beds</div>
+                    </div>
+                    <div class="stat-item reveal">
+                        <div class="stat-number"><span class="counter" data-target="99">0</span>.4%</div>
+                        <div class="stat-label">Clinical Treatment Success</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             SECTION 4: CENTERS OF EXCELLENCE / MEDICAL DEPARTMENTS (3D FLIP CARDS)
+             ========================================================================= -->
+        <section class="section" id="departments-section">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <div class="badge-pill">
+                        <i class="fa-solid fa-hospital"></i>
+                        <span>Centers of Excellence</span>
+                    </div>
+                    <h2>World-Class Specialized Departments</h2>
+                    <p class="section-sub">
+                        From non-invasive interventional cardiology to robotic joint replacements, each department is backed by leading medical technologies and certified specialists.
+                    </p>
+                </div>
+
+                <div class="grid grid-3">
+                    <!-- Department 1: Cardiology -->
+                    <div class="flip-card-wrapper reveal">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="flip-icon" style="background: rgba(239, 68, 68, 0.12); color: #ef4444;">
+                                    <i class="fa-solid fa-heart-pulse"></i>
+                                </div>
+                                <h3>Cardiology & Cardiac Surgery</h3>
+                                <p>Comprehensive cardiac care including emergency primary angioplasty, coronary bypass surgery, and electrophysiology.</p>
+                                <div class="flip-meta">
+                                    <span><i class="fa-solid fa-user-doctor"></i> 14 Specialists</span>
+                                    <span><i class="fa-solid fa-clock"></i> 24/7 Cath Lab</span>
+                                </div>
+                                <span class="flip-hint"><i class="fa-solid fa-rotate"></i> Flip for procedures</span>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Cardiology Procedures</h3>
+                                <ul class="flip-features-list">
+                                    <li><i class="fa-solid fa-check"></i> Coronary Angioplasty (PTCA)</li>
+                                    <li><i class="fa-solid fa-check"></i> Minimally Invasive CABG</li>
+                                    <li><i class="fa-solid fa-check"></i> Pacemaker & TAVR Implantation</li>
+                                    <li><i class="fa-solid fa-check"></i> 24/7 Emergency Chest Pain Triage</li>
+                                </ul>
+                                <a href="services.html" class="btn btn-white btn-sm">Explore Cardiology <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Department 2: Neurology -->
+                    <div class="flip-card-wrapper reveal">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="flip-icon" style="background: rgba(2, 132, 199, 0.12); color: #0284c7;">
+                                    <i class="fa-solid fa-brain"></i>
+                                </div>
+                                <h3>Neurology & Neurosurgery</h3>
+                                <p>Round-the-clock acute ischemic stroke intervention, microscopic brain surgery, spinal decompression, and epilepsy care.</p>
+                                <div class="flip-meta">
+                                    <span><i class="fa-solid fa-user-doctor"></i> 10 Neurosurgeons</span>
+                                    <span><i class="fa-solid fa-clock"></i> 24/7 Stroke Unit</span>
+                                </div>
+                                <span class="flip-hint"><i class="fa-solid fa-rotate"></i> Flip for procedures</span>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Neuro Procedures</h3>
+                                <ul class="flip-features-list">
+                                    <li><i class="fa-solid fa-check"></i> Endovascular Mechanical Thrombectomy</li>
+                                    <li><i class="fa-solid fa-check"></i> Microscopic Spine Decompression</li>
+                                    <li><i class="fa-solid fa-check"></i> Deep Brain Stimulation (DBS)</li>
+                                    <li><i class="fa-solid fa-check"></i> 3T High-Field Neuro MRI Suite</li>
+                                </ul>
+                                <a href="services.html" class="btn btn-white btn-sm">Explore Neurology <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Department 3: Orthopedics -->
+                    <div class="flip-card-wrapper reveal">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="flip-icon" style="background: rgba(16, 185, 129, 0.12); color: #10b981;">
+                                    <i class="fa-solid fa-bone"></i>
+                                </div>
+                                <h3>Orthopedics & Joint Center</h3>
+                                <p>Pioneering robotic-assisted total knee and hip replacements, keyhole arthroscopy, and complex trauma reconstruction.</p>
+                                <div class="flip-meta">
+                                    <span><i class="fa-solid fa-user-doctor"></i> 12 Surgeons</span>
+                                    <span><i class="fa-solid fa-robot"></i> Robotic Knee</span>
+                                </div>
+                                <span class="flip-hint"><i class="fa-solid fa-rotate"></i> Flip for procedures</span>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Ortho Procedures</h3>
+                                <ul class="flip-features-list">
+                                    <li><i class="fa-solid fa-check"></i> Mako Robotic Total Knee & Hip</li>
+                                    <li><i class="fa-solid fa-check"></i> Arthroscopic ACL/PCL Reconstruction</li>
+                                    <li><i class="fa-solid fa-check"></i> Advanced Cartilage Regeneration</li>
+                                    <li><i class="fa-solid fa-check"></i> 24-Hour Post-Op Mobility Rehab</li>
+                                </ul>
+                                <a href="services.html" class="btn btn-white btn-sm">Explore Orthopedics <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Department 4: Pediatrics -->
+                    <div class="flip-card-wrapper reveal">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="flip-icon" style="background: rgba(245, 158, 11, 0.12); color: #f59e0b;">
+                                    <i class="fa-solid fa-baby"></i>
+                                </div>
+                                <h3>Pediatrics & Level III NICU</h3>
+                                <p>Compassionate pediatric intensive therapy, advanced neonatal care for pre-term infants, immunization, and child development.</p>
+                                <div class="flip-meta">
+                                    <span><i class="fa-solid fa-user-doctor"></i> 9 Pediatricians</span>
+                                    <span><i class="fa-solid fa-shield"></i> Level III NICU</span>
+                                </div>
+                                <span class="flip-hint"><i class="fa-solid fa-rotate"></i> Flip for procedures</span>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Pediatric Services</h3>
+                                <ul class="flip-features-list">
+                                    <li><i class="fa-solid fa-check"></i> Neonatal High-Frequency Ventilation</li>
+                                    <li><i class="fa-solid fa-check"></i> Pediatric Cardiac Surgery</li>
+                                    <li><i class="fa-solid fa-check"></i> Child Developmental Screening</li>
+                                    <li><i class="fa-solid fa-check"></i> Child-Friendly Private Suites</li>
+                                </ul>
+                                <a href="services.html" class="btn btn-white btn-sm">Explore Pediatrics <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Department 5: Oncology -->
+                    <div class="flip-card-wrapper reveal">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="flip-icon" style="background: rgba(147, 51, 234, 0.12); color: #9333ea;">
+                                    <i class="fa-solid fa-ribbon"></i>
+                                </div>
+                                <h3>Comprehensive Oncology</h3>
+                                <p>Multidisciplinary cancer management integrating targeted immunotherapy, precision chemotherapy, and surgical tumor resection.</p>
+                                <div class="flip-meta">
+                                    <span><i class="fa-solid fa-user-doctor"></i> 8 Oncologists</span>
+                                    <span><i class="fa-solid fa-dna"></i> Genomic Tumor</span>
+                                </div>
+                                <span class="flip-hint"><i class="fa-solid fa-rotate"></i> Flip for procedures</span>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Oncology Services</h3>
+                                <ul class="flip-features-list">
+                                    <li><i class="fa-solid fa-check"></i> Daycare Chemotherapy Lounge</li>
+                                    <li><i class="fa-solid fa-check"></i> High-Precision Linear Accelerator</li>
+                                    <li><i class="fa-solid fa-check"></i> Molecular Genetic Tumor Profiling</li>
+                                    <li><i class="fa-solid fa-check"></i> Multi-Specialty Tumor Board Review</li>
+                                </ul>
+                                <a href="services.html" class="btn btn-white btn-sm">Explore Oncology <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Department 6: Emergency & Trauma -->
+                    <div class="flip-card-wrapper reveal">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <div class="flip-icon" style="background: rgba(239, 68, 68, 0.12); color: #ef4444;">
+                                    <i class="fa-solid fa-truck-medical"></i>
+                                </div>
+                                <h3>Level 1 Emergency & Trauma</h3>
+                                <p>Round-the-clock emergency command center with dedicated resuscitation bays, immediate triage, and mobile ICU fleet.</p>
+                                <div class="flip-meta">
+                                    <span><i class="fa-solid fa-user-doctor"></i> 16 Specialists</span>
+                                    <span><i class="fa-solid fa-bolt"></i> Zero Wait</span>
+                                </div>
+                                <span class="flip-hint"><i class="fa-solid fa-rotate"></i> Flip for procedures</span>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>Emergency Capabilities</h3>
+                                <ul class="flip-features-list">
+                                    <li><i class="fa-solid fa-check"></i> Acute Poly-Trauma Resuscitation</li>
+                                    <li><i class="fa-solid fa-check"></i> Immediate Code Blue Cardiac Arrest</li>
+                                    <li><i class="fa-solid fa-check"></i> Rapid Stroke Door-to-Needle</li>
+                                    <li><i class="fa-solid fa-check"></i> GPS Dispatched Mobile ICU Fleet</li>
+                                </ul>
+                                <a href="contact.html" class="btn btn-white btn-sm">Emergency Info <i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 40px;">
+                    <a href="services.html" class="btn btn-primary">
+                        <span>View All Hospital Specialties & Departments</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             SECTION 5: PREVENTIVE HEALTH CHECKUP PACKAGES
+             ========================================================================= -->
+        <section class="section" id="packages-section">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <div class="badge-pill">
+                        <i class="fa-solid fa-clipboard-check"></i>
+                        <span>Preventive Healthcare</span>
+                    </div>
+                    <h2>Comprehensive Health Checkup Packages</h2>
+                    <p class="section-sub">
+                        Early detection saves lives. Choose from our clinically curated health screening packages designed for all age groups with same-day reports.
+                    </p>
+                </div>
+
+                <div class="grid grid-3">
+                    <!-- Package 1 -->
+                    <div class="package-card reveal" style="padding: 30px; display: flex; flex-direction: column;">
+                        <span class="badge-pill" style="margin-bottom: 15px; width: fit-content;">Annual Wellness</span>
+                        <h3 style="font-size: 1.35rem; margin-bottom: 8px;">Essential Health Wellness</h3>
+                        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 16px;">Designed for vital organ biochemical evaluation and routine baseline health assessment.</p>
+                        <div style="font-size: 2.2rem; font-weight: 800; color: var(--primary); margin-bottom: 16px;">
+                            $149 <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 400;">/ Half-day screen</span>
+                        </div>
+                        <ul style="list-style: none; padding: 0; margin-bottom: 24px; font-size: 0.88rem; line-height: 2;">
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Complete Blood Count (CBC, 24 parameters)</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Fasting & Post-Prandial Glucose Profile</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Complete Lipid Profile (Cholesterol/Triglycerides)</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Kidney & Liver Function Screening</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> 12-Lead Resting Digital ECG</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Senior Physician Consultation</li>
+                        </ul>
+                        <a href="get-started.html" class="btn btn-outline btn-block" style="margin-top: auto;">Get Started</a>
+                    </div>
+
+                    <!-- Package 2: Most Popular -->
+                    <div class="package-card reveal" style="padding: 30px; display: flex; flex-direction: column; border: 2px solid var(--primary); position: relative;">
+                        <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--primary); color: #fff; font-size: 0.72rem; font-weight: 800; padding: 3px 14px; border-radius: 20px; text-transform: uppercase;">Most Popular</div>
+                        <span class="badge-pill" style="margin-bottom: 15px; width: fit-content; background: rgba(239, 68, 68, 0.12); color: #ef4444; border-color: rgba(239,68,68,0.3);">Cardiac Specialty</span>
+                        <h3 style="font-size: 1.35rem; margin-bottom: 8px;">Comprehensive Heart & Vascular</h3>
+                        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 16px;">Gold-standard cardiovascular risk screening, treadmill stress testing, and echocardiography.</p>
+                        <div style="font-size: 2.2rem; font-weight: 800; color: var(--primary); margin-bottom: 16px;">
+                            $299 <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 400;">/ Single-day screen</span>
+                        </div>
+                        <ul style="list-style: none; padding: 0; margin-bottom: 24px; font-size: 0.88rem; line-height: 2;">
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> All tests in Essential Wellness Package</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Color Doppler 2D Echocardiography (Echo)</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Computerized Treadmill Stress Test (TMT)</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> High-Sensitivity hs-CRP Cardiac Risk</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Serum Homocysteine & Electrolytes</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Senior Cardiologist Consultation</li>
+                        </ul>
+                        <a href="get-started.html" class="btn btn-primary btn-block" style="margin-top: auto;">Get Started</a>
+                    </div>
+
+                    <!-- Package 3 -->
+                    <div class="package-card reveal" style="padding: 30px; display: flex; flex-direction: column;">
+                        <span class="badge-pill" style="margin-bottom: 15px; width: fit-content;">Full Body Diagnostic</span>
+                        <h3 style="font-size: 1.35rem; margin-bottom: 8px;">Executive Whole-Body Screen</h3>
+                        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 16px;">Head-to-toe clinical evaluation including ultrasound, cancer tumor markers, lungs, and joints.</p>
+                        <div style="font-size: 2.2rem; font-weight: 800; color: var(--primary); margin-bottom: 16px;">
+                            $499 <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 400;">/ Full-day screen</span>
+                        </div>
+                        <ul style="list-style: none; padding: 0; margin-bottom: 24px; font-size: 0.88rem; line-height: 2;">
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> All tests in Cardiac & Essential Packages</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Whole Abdomen & Pelvic Ultrasound (USG)</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Pulmonary Function Test (PFT Spirometry)</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Thyroid Panel & Cancer Tumor Markers</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Vitamin D3, B12, & Calcium Levels</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Dietary & Lifestyle Preventive Counseling</li>
+                        </ul>
+                        <a href="get-started.html" class="btn btn-outline btn-block" style="margin-top: auto;">Get Started</a>
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 36px;">
+                    <a href="health-packages.html" class="btn btn-outline">
+                        <i class="fa-solid fa-kit-medical"></i>
+                        <span>Explore All Special Packages (Women's Health, Diabetes, Senior Citizens)</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             SECTION 6: CLINICAL & SURGICAL EXCELLENCE (HIGH CLARITY PHOTOS)
+             ========================================================================= -->
+        <section class="section" style="background: var(--bg-alt);">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <div class="badge-pill">
+                        <i class="fa-solid fa-hospital"></i>
+                        <span>Quaternary Healthcare</span>
+                    </div>
+                    <h2>World-Class Medical Infrastructure & Diagnostic Capabilities</h2>
+                    <p class="section-sub">
+                        Combining human intellect with surgical robotics, high-resolution diagnostic imaging, and intensive round-the-clock monitoring.
+                    </p>
+                </div>
+
+                <div class="grid grid-4" style="gap: 24px;">
+                    <!-- Facility 1 -->
+                    <div class="feature-card reveal" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=88" alt="Robotic Surgery Suite" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div style="padding: 22px; display: flex; flex-direction: column; flex-grow: 1;">
+                            <span class="badge-pill" style="font-size: 0.7rem; align-self: flex-start; margin-bottom: 10px;">Precision Surgery</span>
+                            <h4 style="font-size: 1.15rem; margin-bottom: 8px;">Robotic OT Suites</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin: 0 0 14px; flex-grow: 1;">
+                                Mako & da Vinci robotic systems with laminar airflow Class 100 sterility for sub-millimeter surgical accuracy.
+                            </p>
+                            <a href="get-started.html" class="btn btn-outline btn-sm" style="width: 100%; text-align: center;">Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- Facility 2 -->
+                    <div class="feature-card reveal" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=88" alt="3T Silent MRI" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div style="padding: 22px; display: flex; flex-direction: column; flex-grow: 1;">
+                            <span class="badge-pill" style="font-size: 0.7rem; align-self: flex-start; margin-bottom: 10px;">Advanced Radiology</span>
+                            <h4 style="font-size: 1.15rem; margin-bottom: 8px;">3T Silent MRI & CT</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin: 0 0 14px; flex-grow: 1;">
+                                Wide-bore 3-Tesla MRI and low-dose 128-slice dual CT angiography for same-day diagnostic precision.
+                            </p>
+                            <a href="get-started.html" class="btn btn-outline btn-sm" style="width: 100%; text-align: center;">Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- Facility 3 -->
+                    <div class="feature-card reveal" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=88" alt="150 ICU Beds" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div style="padding: 22px; display: flex; flex-direction: column; flex-grow: 1;">
+                            <span class="badge-pill" style="font-size: 0.7rem; align-self: flex-start; margin-bottom: 10px;">Critical Care</span>
+                            <h4 style="font-size: 1.15rem; margin-bottom: 8px;">150 Critical Care Beds</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin: 0 0 14px; flex-grow: 1;">
+                                Modular Cardiac CICU, Neuro ICU, and Level-III NICU with 1:1 dedicated nursing and continuous central telemetry.
+                            </p>
+                            <a href="get-started.html" class="btn btn-outline btn-sm" style="width: 100%; text-align: center;">Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- Facility 4 -->
+                    <div class="feature-card reveal" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?auto=format&fit=crop&w=800&q=88" alt="Cardiac Cath Lab" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div style="padding: 22px; display: flex; flex-direction: column; flex-grow: 1;">
+                            <span class="badge-pill" style="font-size: 0.7rem; align-self: flex-start; margin-bottom: 10px;">Heart Emergency</span>
+                            <h4 style="font-size: 1.15rem; margin-bottom: 8px;">24/7 Digital Cath Lab</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin: 0 0 14px; flex-grow: 1;">
+                                Biplane flat-panel catheterization suites performing emergency primary angioplasties under 48 minutes.
+                            </p>
+                            <a href="get-started.html" class="btn btn-outline btn-sm" style="width: 100%; text-align: center;">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             SECTION 7: PATIENT STORIES & TESTIMONIALS
+             ========================================================================= -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <div class="badge-pill">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Patient Experiences</span>
+                    </div>
+                    <h2>Stories of Hope, Healing & Recovery</h2>
+                    <p class="section-sub">
+                        Read what our patients and their families say about their clinical care journey.
+                    </p>
+                </div>
+
+                <div class="grid grid-3">
+                    <!-- Story 1 -->
+                    <div class="testimonial-card reveal" style="padding: 28px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg);">
+                        <div class="rating-stars" style="color: #f59e0b; margin-bottom: 14px;">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p style="font-style: italic; color: var(--text-muted); margin-bottom: 20px; font-size: 0.94rem; line-height: 1.6;">
+                            "The cardiology team literally saved my life. Dr. Elena Rostova and the CCU nurses treated me like family from emergency intake all the way to full recovery."
+                        </p>
+                        <div style="display: flex; align-items: center; gap: 14px;">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=88" alt="Robert Callahan" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                            <div>
+                                <h4 style="margin: 0; font-size: 0.98rem;">Robert Callahan</h4>
+                                <span style="font-size: 0.78rem; color: var(--primary); font-weight: 600;">Cardiac Bypass Patient</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Story 2 -->
+                    <div class="testimonial-card reveal" style="padding: 28px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg);">
+                        <div class="rating-stars" style="color: #f59e0b; margin-bottom: 14px;">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p style="font-style: italic; color: var(--text-muted); margin-bottom: 20px; font-size: 0.94rem; line-height: 1.6;">
+                            "The pediatric ward is colorful, peaceful, and warm. Dr. Sarah Chen was extraordinarily patient and comforting with my 4-year-old daughter during her stay."
+                        </p>
+                        <div style="display: flex; align-items: center; gap: 14px;">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1200&q=88" alt="Samantha Wright" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                            <div>
+                                <h4 style="margin: 0; font-size: 0.98rem;">Samantha Wright</h4>
+                                <span style="font-size: 0.78rem; color: var(--primary); font-weight: 600;">Mother of Pediatric Patient</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Story 3 -->
+                    <div class="testimonial-card reveal" style="padding: 28px; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-lg);">
+                        <div class="rating-stars" style="color: #f59e0b; margin-bottom: 14px;">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p style="font-style: italic; color: var(--text-muted); margin-bottom: 20px; font-size: 0.94rem; line-height: 1.6;">
+                            "I was walking with support within 24 hours of my robotic total knee surgery! Dr. Reyes and the physiotherapy department provided world-class post-op rehab."
+                        </p>
+                        <div style="display: flex; align-items: center; gap: 14px;">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1200&q=88" alt="Michael Ramirez" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;">
+                            <div>
+                                <h4 style="margin: 0; font-size: 0.98rem;">Michael Ramirez</h4>
+                                <span style="font-size: 0.78rem; color: var(--primary); font-weight: 600;">Robotic Knee Replacement</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             SECTION 9: CASHLESS INSURANCE & HEALTHCARE PARTNERS
+             ========================================================================= -->
+        <section class="section" style="background: var(--bg-alt); padding: 40px 0;">
+            <div class="container text-center">
+                <p style="font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--text-muted); margin-bottom: 24px;">
+                    Hassle-Free 100% Cashless Hospitalization With Leading Insurance Providers
+                </p>
+                <div style="display: flex; justify-content: center; align-items: center; gap: 32px; flex-wrap: wrap; opacity: 0.85;">
+                    <div style="display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--text-main); font-size: 1.05rem;">
+                        <i class="fa-solid fa-shield-halved" style="color: var(--primary);"></i> BlueCross BlueShield
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--text-main); font-size: 1.05rem;">
+                        <i class="fa-solid fa-heart-circle-check" style="color: #ef4444;"></i> Aetna Healthcare
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--text-main); font-size: 1.05rem;">
+                        <i class="fa-solid fa-hospital" style="color: #10b981;"></i> UnitedHealthcare
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--text-main); font-size: 1.05rem;">
+                        <i class="fa-solid fa-circle-check" style="color: #38bdf8;"></i> Cigna Health
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--text-main); font-size: 1.05rem;">
+                        <i class="fa-solid fa-user-nurse" style="color: #f59e0b;"></i> Kaiser Permanente
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             SECTION 10: HOSPITAL HEALTH BLOG & MEDICAL INSIGHTS
+             ========================================================================= -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <div class="badge-pill">
+                        <i class="fa-solid fa-newspaper"></i>
+                        <span>Medical Insights</span>
+                    </div>
+                    <h2>Latest Health Insights & Clinical Articles</h2>
+                    <p class="section-sub">
+                        Learn evidence-based wellness advice, early illness detection methods, and breakthroughs directly from our leading hospital medical specialists.
+                    </p>
+                </div>
+
+                <div class="grid grid-3">
+                    <!-- Article 1 -->
+                    <article class="package-card reveal" style="overflow: hidden; padding: 0;">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=88" alt="Stroke protocol" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div style="padding: 24px;">
+                            <span class="badge-pill" style="font-size: 0.72rem; margin-bottom: 12px;">Neurology</span>
+                            <h3 style="font-size: 1.15rem; margin-bottom: 10px;">Recognizing Early Warning Signs of Stroke: The F.A.S.T Protocol</h3>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">Time is brain tissue. Learn how rapid identification within the 3-hour golden window reverses neurological deficits.</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: var(--text-muted); border-top: 1px solid var(--border-color); padding-top: 12px;">
+                                <span><i class="fa-regular fa-user"></i> Dr. Marcus Vance</span>
+                                <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="package-card reveal" style="overflow: hidden; padding: 0;">
+                        <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=88" alt="Robotic surgery" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div style="padding: 24px;">
+                            <span class="badge-pill" style="font-size: 0.72rem; margin-bottom: 12px;">Orthopedics</span>
+                            <h3 style="font-size: 1.15rem; margin-bottom: 10px;">Advances in Robotic Knee Replacement: Walk Within 24 Hours</h3>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">How 3D computed CT mapping and sub-millimeter robotic arm precision achieve rapid post-operative recovery.</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: var(--text-muted); border-top: 1px solid var(--border-color); padding-top: 12px;">
+                                <span><i class="fa-regular fa-user"></i> Dr. Jonathan Reyes</span>
+                                <span><i class="fa-regular fa-clock"></i> 6 min read</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="package-card reveal" style="overflow: hidden; padding: 0;">
+                        <img src="https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?auto=format&fit=crop&w=1200&q=88" alt="Heart health" style="width: 100%; height: 200px; object-fit: cover;">
+                        <div style="padding: 24px;">
+                            <span class="badge-pill" style="font-size: 0.72rem; margin-bottom: 12px;">Cardiology</span>
+                            <h3 style="font-size: 1.15rem; margin-bottom: 10px;">Preventing Cardiovascular Disease in Your 30s and 40s</h3>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">Proactive screening guidelines, lipid profiling, coronary calcium scoring, and heart-healthy lifestyle choices.</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: var(--text-muted); border-top: 1px solid var(--border-color); padding-top: 12px;">
+                                <span><i class="fa-regular fa-user"></i> Dr. Elena Rostova</span>
+                                <span><i class="fa-regular fa-clock"></i> 4 min read</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="text-center" style="margin-top: 36px;">
+                    <a href="blog.html" class="btn btn-outline">
+                        <span>Read All Medical Articles on Health Blog</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             SECTION 11: CALL TO ACTION BANNER (APPOINTMENT & EMERGENCY)
+             ========================================================================= -->
+        <section class="section" style="background: linear-gradient(135deg, #0b1324 0%, #0369a1 100%); color: #ffffff; padding: 70px 0;">
+            <div class="container text-center">
+                <div class="badge-pill" style="background: rgba(255, 255, 255, 0.15); color: #ffffff; border-color: rgba(255, 255, 255, 0.3); margin-bottom: 20px;">
+                    <i class="fa-solid fa-user-doctor"></i>
+                    <span>24/7 Patient Care Helpline</span>
+                </div>
+                <h2 style="color: #ffffff; font-size: 2.5rem; margin-bottom: 16px;">
+                    Need Immediate Medical Guidance or an Appointment?
+                </h2>
+                <p style="max-width: 650px; margin: 0 auto 30px; font-size: 1.05rem; color: #e0f2fe;">
+                    Our medical care coordinators and Level-1 trauma response team are available 24 hours a day, 365 days a year.
+                </p>
+                <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                    <a href="get-started.html" class="btn btn-primary btn-lg" style="background: #ffffff; color: #0284c7;">
+                        <i class="fa-solid fa-circle-play"></i>
+                        <span>Get Started</span>
+                    </a>
+                    <a href="tel:+919840055500" class="btn btn-outline btn-lg" style="color: #ffffff; border-color: #ffffff;">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Call 24/7 Emergency: +91 98400 55500</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- =========================================================================
+         SITE FOOTER (ADDRESS ONLY IN FOOTER AS REQUIRED)
+         ========================================================================= -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <a href="index.html" class="brand-logo" style="margin-bottom: 16px;">
+                        <img src="assets/images/logo.png" alt="Hospital Logo" width="34" height="42" style="height: 42px; width: auto; object-fit: contain;">
+                    </a>
+                    <p>
+                        Our Super Specialty Hospital is a NABH & JCI accredited multi-specialty medical healthcare institution committed to clinical excellence, patient safety, and compassionate care.
+                    </p>
+                    <div class="social-links">
+                        <a href="404.html" class="social-icon linkedin" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404.html" class="social-icon instagram" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="404.html" class="social-icon twitter" title="X (Twitter)" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="404.html" class="social-icon youtube" title="YouTube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Clinical Specialties</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Cardiology & Heart Surgery</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Neurology & Neurosurgery</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Orthopedics & Robotic Knee</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Pediatrics & Level III NICU</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Medical & Surgical Oncology</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> 24/7 Level-1 Trauma Care</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Patient Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="doctors.html"><i class="fa-solid fa-chevron-right"></i> Find a Specialist Doctor</a></li>
+                        <li><a href="get-started.html"><i class="fa-solid fa-chevron-right"></i> Book OPD Appointment</a></li>
+                        <li><a href="health-packages.html"><i class="fa-solid fa-chevron-right"></i> Health Checkup Packages</a></li>
+                        <li><a href="signin.html"><i class="fa-solid fa-chevron-right"></i> Patient Medical Records</a></li>
+                        <li><a href="insurance-tpa.html"><i class="fa-solid fa-chevron-right"></i> Cashless Insurance & TPA</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Emergency Ambulance Desk</a></li>
+                    </ul>
+                </div>
+
+                <!-- Hospital Address Column: ADDRESS ONLY IN FOOTER -->
+                <div class="footer-col footer-newsletter">
+                    <h4>Hospital Location & Desk</h4>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot" style="color: #38bdf8;"></i>
+                            <span>45 Meyyanur Bypass Road, Near New Bus Stand, Salem - 636004, Tamil Nadu, India</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-truck-medical" style="color: #ef4444;"></i>
+                            <span>24/7 Emergency: +91 98400 55500</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone" style="color: #38bdf8;"></i>
+                            <span>Appointments: +91 (0427) 244-0199</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope" style="color: #38bdf8;"></i>
+                            <span>care@stacklyhospital.com</span>
+                        </li>
+                    </ul>
+                    <form class="newsletter-form" style="margin-top: 15px;" onsubmit="event.preventDefault(); showToast('Subscribed to Hospital Health Tips!', 'success'); this.reset();">
+                        <input type="email" class="newsletter-input" placeholder="Enter Email for Health Tips" required>
+                        <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Super Specialty Hospital, Salem, Tamil Nadu, India. All rights reserved. (NABH & JCI Accredited)</p>
+                <div class="footer-bottom-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Patient Rights</a>
+                    <a href="404.html">Cashless TPA</a>
+                    <a href="404.html">NABH Certification</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="back-to-top-btn" title="Back to Top" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Hospital JavaScript Engine -->
+    <script src="data/hospital-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Preventive Health Checkup Packages & Clinical Screening Programs. Comprehensive full-body, cardiac, diabetic, and executive health packages.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+    <title>Health Checkup Packages | Super Specialty Hospital</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- STICKY HEADER & NAVIGATION (ONLY LOGO, NO TEXT) -->
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="assets/images/logo.png" alt="Hospital Logo" width="36" height="44" style="height: 44px; width: auto; object-fit: contain;">
+            </a>
+
+            <nav class="nav-menu" id="siteNavMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Specialties</a>
+                <a href="doctors.html" class="nav-link">Doctors</a>
+                <a href="health-packages.html" class="nav-link active">Health Packages</a>
+                <a href="blog.html" class="nav-link">Health Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <div class="nav-actions-mobile">
+                    <a href="signin.html" class="btn btn-signin">Sign In</a>
+                    <a href="get-started.html" class="btn btn-primary">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="signin.html" class="btn btn-signin">Sign In</a>
+                <a href="get-started.html" class="btn btn-primary">
+                    <span>Get Started</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- PAGE BANNER -->
+        <section class="page-banner">
+            <div class="container">
+                <div class="reveal active">
+                    <h1>Preventive Health Checkup Packages</h1>
+                    <div class="breadcrumb">
+                        <a href="index.html">Home</a>
+                        <i class="fa-solid fa-chevron-right" style="font-size: 0.75rem;"></i>
+                        <span>Health Packages</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PACKAGES CATALOG -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <span class="section-subtitle">
+                        <i class="fa-solid fa-clipboard-check"></i> Proactive Wellness
+                    </span>
+                    <h2 class="section-title">Clinically Formulated Health Screening</h2>
+                    <p class="section-desc">
+                        Early diagnosis of cardiovascular risks, diabetes, metabolic disorders, and cancers ensures prompt intervention and total recovery.
+                    </p>
+                </div>
+
+                <div class="grid grid-3">
+                    <!-- Package 1 -->
+                    <div class="package-card reveal" style="padding: 30px; display: flex; flex-direction: column;">
+                        <span class="badge-pill" style="margin-bottom: 15px; width: fit-content;">Annual Wellness</span>
+                        <h3 style="font-size: 1.35rem; margin-bottom: 8px;">Essential Health Wellness</h3>
+                        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 16px;">Designed for routine annual biochemical and vital organ baseline evaluations.</p>
+                        <div style="font-size: 2.2rem; font-weight: 800; color: var(--primary); margin-bottom: 16px;">
+                            $149 <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 400;">/ Half-day screen</span>
+                        </div>
+                        <ul style="list-style: none; padding: 0; margin-bottom: 24px; font-size: 0.88rem; line-height: 2;">
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Complete Blood Count (CBC, 24 parameters)</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Fasting & PP Blood Sugar Profile</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Complete Lipid Profile (Cholesterol/Triglycerides)</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Kidney & Liver Function Screening</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> 12-Lead Resting Digital ECG</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Senior Physician Consultation</li>
+                        </ul>
+                        <a href="get-started.html" class="btn btn-outline btn-block" style="margin-top: auto;">Get Started</a>
+                    </div>
+
+                    <!-- Package 2: Most Popular -->
+                    <div class="package-card reveal" style="padding: 30px; display: flex; flex-direction: column; border: 2px solid var(--primary); position: relative;">
+                        <div style="position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--primary); color: #fff; font-size: 0.72rem; font-weight: 800; padding: 3px 14px; border-radius: 20px; text-transform: uppercase;">Most Popular</div>
+                        <span class="badge-pill" style="margin-bottom: 15px; width: fit-content; background: rgba(239, 68, 68, 0.12); color: #ef4444; border-color: rgba(239,68,68,0.3);">Cardiovascular Focus</span>
+                        <h3 style="font-size: 1.35rem; margin-bottom: 8px;">Comprehensive Heart & Vascular</h3>
+                        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 16px;">Gold-standard cardiovascular risk screening, treadmill stress testing, and echocardiography.</p>
+                        <div style="font-size: 2.2rem; font-weight: 800; color: var(--primary); margin-bottom: 16px;">
+                            $299 <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 400;">/ Single-day screen</span>
+                        </div>
+                        <ul style="list-style: none; padding: 0; margin-bottom: 24px; font-size: 0.88rem; line-height: 2;">
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> All tests in Essential Wellness Package</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Color Doppler 2D Echocardiography (Echo)</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Computerized Treadmill Stress Test (TMT)</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> High-Sensitivity hs-CRP Cardiac Risk</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Serum Homocysteine & Electrolytes</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Senior Cardiologist Consultation</li>
+                        </ul>
+                        <a href="get-started.html" class="btn btn-primary btn-block" style="margin-top: auto;">Get Started</a>
+                    </div>
+
+                    <!-- Package 3 -->
+                    <div class="package-card reveal" style="padding: 30px; display: flex; flex-direction: column;">
+                        <span class="badge-pill" style="margin-bottom: 15px; width: fit-content;">Full Body Diagnostic</span>
+                        <h3 style="font-size: 1.35rem; margin-bottom: 8px;">Executive Whole-Body Screen</h3>
+                        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 16px;">Head-to-toe clinical evaluation including ultrasound, cancer tumor markers, lungs, and joints.</p>
+                        <div style="font-size: 2.2rem; font-weight: 800; color: var(--primary); margin-bottom: 16px;">
+                            $499 <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 400;">/ Full-day screen</span>
+                        </div>
+                        <ul style="list-style: none; padding: 0; margin-bottom: 24px; font-size: 0.88rem; line-height: 2;">
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> All tests in Cardiac & Essential Packages</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Whole Abdomen & Pelvic Ultrasound (USG)</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Pulmonary Function Test (PFT Spirometry)</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Thyroid Panel & Cancer Tumor Markers</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Vitamin D3, B12, & Calcium Levels</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Dietary & Lifestyle Preventive Counseling</li>
+                        </ul>
+                        <a href="get-started.html" class="btn btn-outline btn-block" style="margin-top: auto;">Get Started</a>
+                    </div>
+
+                    <!-- Package 4 -->
+                    <div class="package-card reveal" style="padding: 30px; display: flex; flex-direction: column;">
+                        <span class="badge-pill" style="margin-bottom: 15px; width: fit-content; background: rgba(236, 72, 153, 0.12); color: #ec4899; border-color: rgba(236,72,153,0.3);">Women's Health</span>
+                        <h3 style="font-size: 1.35rem; margin-bottom: 8px;">Well-Woman Comprehensive</h3>
+                        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 16px;">Tailored preventive screen for breast, cervical, hormonal, and bone density health.</p>
+                        <div style="font-size: 2.2rem; font-weight: 800; color: var(--primary); margin-bottom: 16px;">
+                            $329 <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 400;">/ Single-day</span>
+                        </div>
+                        <ul style="list-style: none; padding: 0; margin-bottom: 24px; font-size: 0.88rem; line-height: 2;">
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Digital Mammography / Breast Ultrasound</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Liquid-Based Pap Smear Cervical Screening</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> DEXA Bone Mineral Density Scan (Osteoporosis)</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Complete Female Hormone Panel (TSH, LH, FSH)</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Senior Gynecologist Consultation</li>
+                        </ul>
+                        <a href="get-started.html" class="btn btn-outline btn-block" style="margin-top: auto;">Get Started</a>
+                    </div>
+
+                    <!-- Package 5 -->
+                    <div class="package-card reveal" style="padding: 30px; display: flex; flex-direction: column;">
+                        <span class="badge-pill" style="margin-bottom: 15px; width: fit-content; background: rgba(16, 185, 129, 0.12); color: #10b981; border-color: rgba(16,185,129,0.3);">Diabetic Care</span>
+                        <h3 style="font-size: 1.35rem; margin-bottom: 8px;">Advanced Diabetic Health</h3>
+                        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 16px;">Comprehensive diabetic complication prevention including kidneys, eyes, and nerves.</p>
+                        <div style="font-size: 2.2rem; font-weight: 800; color: var(--primary); margin-bottom: 16px;">
+                            $199 <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 400;">/ Half-day</span>
+                        </div>
+                        <ul style="list-style: none; padding: 0; margin-bottom: 24px; font-size: 0.88rem; line-height: 2;">
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> HbA1c Glycated Hemoglobin Test</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Dilated Eye Fundus Retinopathy Exam</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Urine Microalbumin / Creatinine Ratio</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Diabetic Neuropathy Biothesiometry Screen</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Endocrinologist & Dietitian Consultation</li>
+                        </ul>
+                        <a href="get-started.html" class="btn btn-outline btn-block" style="margin-top: auto;">Get Started</a>
+                    </div>
+
+                    <!-- Package 6 -->
+                    <div class="package-card reveal" style="padding: 30px; display: flex; flex-direction: column;">
+                        <span class="badge-pill" style="margin-bottom: 15px; width: fit-content; background: rgba(147, 51, 234, 0.12); color: #9333ea; border-color: rgba(147,51,234,0.3);">Senior Citizens</span>
+                        <h3 style="font-size: 1.35rem; margin-bottom: 8px;">Senior Citizen Comprehensive</h3>
+                        <p style="color: var(--text-muted); font-size: 0.88rem; margin-bottom: 16px;">Holistic health screen customized for age 60+ focusing on joint, prostate, and memory health.</p>
+                        <div style="font-size: 2.2rem; font-weight: 800; color: var(--primary); margin-bottom: 16px;">
+                            $249 <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 400;">/ Single-day</span>
+                        </div>
+                        <ul style="list-style: none; padding: 0; margin-bottom: 24px; font-size: 0.88rem; line-height: 2;">
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Prostate PSA (Men) / Mammogram (Women)</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Joint Mobility & Arthritis Screening</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> High-Resolution Chest X-Ray & ECG</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Electrolytes & Renal Function Panel</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #10b981; margin-right: 8px;"></i> Senior Geriatric Specialist Consultation</li>
+                        </ul>
+                        <a href="get-started.html" class="btn btn-outline btn-block" style="margin-top: auto;">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- HEALTH CHECKUP PREPARATION GUIDE (WITH PHOTOS) -->
+                <div class="feature-card reveal" style="margin-top: 50px; padding: 36px; background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-alt) 100%);">
+                    <div class="grid grid-2" style="align-items: center; gap: 40px;">
+                        <div>
+                            <div class="badge-pill" style="margin-bottom: 12px;">
+                                <i class="fa-solid fa-notes-medical"></i> Preparation Tips
+                            </div>
+                            <h3 style="font-size: 1.6rem; margin-bottom: 14px;">How to Prepare for Your Health Screening</h3>
+                            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; font-size: 0.92rem; color: var(--text-muted);">
+                                <li style="display: flex; align-items: flex-start; gap: 12px;">
+                                    <i class="fa-solid fa-mug-saucer" style="color: var(--primary); margin-top: 4px;"></i>
+                                    <span><strong>10-12 Hours Fasting:</strong> Do not consume food or caffeinated beverages overnight. Plain water is permitted.</span>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 12px;">
+                                    <i class="fa-solid fa-clock" style="color: var(--primary); margin-top: 4px;"></i>
+                                    <span><strong>Early Morning Arrival:</strong> Report between 7:30 AM and 8:30 AM at the Preventive Care Executive Lounge for blood and urine sampling.</span>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 12px;">
+                                    <i class="fa-solid fa-utensils" style="color: var(--primary); margin-top: 4px;"></i>
+                                    <span><strong>Complimentary Breakfast:</strong> A dietitian-curated wholesome breakfast will be served after fasting blood samples.</span>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; gap: 12px;">
+                                    <i class="fa-solid fa-file-medical" style="color: var(--primary); margin-top: 4px;"></i>
+                                    <span><strong>Same-Day Physician Review:</strong> Comprehensive doctor consultation with all lab test reports explained by 2:00 PM.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=800&q=88" alt="Executive Health Checkup Lounge" style="width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- SITE FOOTER (ADDRESS ONLY IN FOOTER) -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <a href="index.html" class="brand-logo" style="margin-bottom: 16px;">
+                        <img src="assets/images/logo.png" alt="Hospital Logo" width="34" height="42" style="height: 42px; width: auto; object-fit: contain;">
+                    </a>
+                    <p>
+                        Super Specialty Hospital is a NABH & JCI accredited multi-specialty medical healthcare institution committed to clinical excellence, patient safety, and compassionate care.
+                    </p>
+                    <div class="social-links">
+                        <a href="404.html" class="social-icon linkedin" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404.html" class="social-icon instagram" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="404.html" class="social-icon twitter" title="X (Twitter)" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="404.html" class="social-icon youtube" title="YouTube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Clinical Specialties</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Cardiology & Heart Surgery</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Neurology & Stroke Unit</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Orthopedics & Robotic Knee</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Pediatrics & Level III NICU</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Medical Oncology</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Patient Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="doctors.html"><i class="fa-solid fa-chevron-right"></i> Find a Specialist Doctor</a></li>
+                        <li><a href="get-started.html"><i class="fa-solid fa-chevron-right"></i> Get Started</a></li>
+                        <li><a href="health-packages.html"><i class="fa-solid fa-chevron-right"></i> Health Checkup Packages</a></li>
+                        <li><a href="signin.html"><i class="fa-solid fa-chevron-right"></i> Patient Medical Records</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Emergency Ambulance Desk</a></li>
+                    </ul>
+                </div>
+
+                <!-- ADDRESS ONLY IN FOOTER -->
+                <div class="footer-col footer-newsletter">
+                    <h4>Hospital Location & Desk</h4>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot" style="color: #38bdf8;"></i>
+                            <span>45 Meyyanur Bypass Road, Near New Bus Stand, Salem - 636004, Tamil Nadu, India</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-truck-medical" style="color: #ef4444;"></i>
+                            <span>24/7 Emergency: +91 98400 55500</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone" style="color: #38bdf8;"></i>
+                            <span>Appointments: +91 (0427) 244-0199</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope" style="color: #38bdf8;"></i>
+                            <span>care@stacklyhospital.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Super Specialty Hospital, Salem, Tamil Nadu, India. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Patient Rights</a>
+                    <a href="404.html">Cashless TPA</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="back-to-top-btn" title="Back to Top" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="data/hospital-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

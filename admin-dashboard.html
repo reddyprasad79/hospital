@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hospital Administration & Medical Command Console - Stackly Super Specialty Hospital. Monitor emergency admissions, ICU bed occupancy, OT suites, and doctor OPD rosters.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+    <title>Hospital Administration Console | Stackly Super Specialty Hospital</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background: var(--bg-alt);">
+
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar" id="dashboardSidebar">
+            <div>
+                <a href="index.html" class="brand-logo">
+                <img src="assets/images/logo.png" alt="Hospital Logo" width="32" height="38" style="height: 38px; width: auto; object-fit: contain;">
+            </a>
+
+                <ul class="dashboard-menu">
+                    <li>
+                        <a href="admin-dashboard.html" class="dashboard-menu-link active">
+                            <i class="fa-solid fa-hospital-user"></i>
+                            <span>Hospital Console</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#icu" class="dashboard-menu-link" onclick="showToast('ICU Status: 22 Beds Available across Units', 'info')">
+                            <i class="fa-solid fa-bed-pulse"></i>
+                            <span>ICU & Bed Tracking</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#ot" class="dashboard-menu-link" onclick="showToast('Operation Theaters: 6 Active Robotic Suites', 'success')">
+                            <i class="fa-solid fa-syringe"></i>
+                            <span>Operation Theaters</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#emergency" class="dashboard-menu-link" onclick="showToast('Emergency Bay: Trauma Alert Zero Queue', 'success')">
+                            <i class="fa-solid fa-truck-medical"></i>
+                            <span>Emergency Triage</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="doctors.html" class="dashboard-menu-link">
+                            <i class="fa-solid fa-user-doctor"></i>
+                            <span>Doctor Rosters</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="dashboard-menu-link">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Back to Hospital Site</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Doctor/Admin Profile Card -->
+            <div>
+                <div class="dashboard-user-card">
+                    <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=1200&q=88" alt="Dr. Arthur Pendelton" class="dashboard-user-avatar">
+                    <div class="dashboard-user-meta">
+                        <h5>Dr. Arthur Pendelton</h5>
+                        <p>CEO & Medical Director</p>
+                    </div>
+                </div>
+                <div style="margin-top: 12px;">
+                    <a href="signin.html" class="btn btn-outline btn-sm" style="width: 100%; border-radius: var(--radius-md);" onclick="showToast('Signed out of Medical Command', 'success')">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <span>Sign Out</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Dashboard Area -->
+        <div class="dashboard-main">
+            <!-- Topbar (NO address) -->
+            <header class="dashboard-topbar">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <button class="mobile-nav-toggle" id="dashSidebarToggle" style="display: block;" aria-label="Toggle Sidebar">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="dashboard-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search patient ID, doctor roster, OT schedule...">
+                    </div>
+                </div>
+
+                <div class="dashboard-topbar-actions">
+                    <span class="hospital-status-pill" style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; font-size: 0.8rem; font-weight: 700; background: rgba(239, 68, 68, 0.15); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.3);">
+                        <span class="pulse-dot" style="background: #ef4444; width: 8px; height: 8px; border-radius: 50%;"></span> Code Blue Ready
+                    </span>
+                </div>
+            </header>
+
+            <!-- Dashboard Content Container -->
+            <div class="dashboard-content">
+                <!-- 4 Operational Metrics Grid -->
+                <div class="grid grid-4">
+                    <div class="metric-card reveal">
+                        <div class="metric-header">
+                            <span class="metric-title">Active Inpatients</span>
+                            <div class="metric-icon" style="background: rgba(2, 132, 199, 0.12); color: var(--primary);">
+                                <i class="fa-solid fa-hospital-user"></i>
+                            </div>
+                        </div>
+                        <div class="metric-value">342 Patients</div>
+                        <div class="metric-trend" style="color: var(--primary);">
+                            <i class="fa-solid fa-bed"></i> 82% Hospital Occupancy
+                        </div>
+                    </div>
+
+                    <div class="metric-card reveal">
+                        <div class="metric-header">
+                            <span class="metric-title">ICU Beds Occupancy</span>
+                            <div class="metric-icon" style="background: rgba(16, 185, 129, 0.12); color: #10b981;">
+                                <i class="fa-solid fa-bed-pulse"></i>
+                            </div>
+                        </div>
+                        <div class="metric-value">128 / 150</div>
+                        <div class="metric-trend" style="color: #10b981;">
+                            <i class="fa-solid fa-check"></i> 22 Modular Beds Available
+                        </div>
+                    </div>
+
+                    <div class="metric-card reveal">
+                        <div class="metric-header">
+                            <span class="metric-title">Emergency Trauma Today</span>
+                            <div class="metric-icon" style="background: rgba(239, 68, 68, 0.12); color: #ef4444;">
+                                <i class="fa-solid fa-truck-medical"></i>
+                            </div>
+                        </div>
+                        <div class="metric-value">28 Admissions</div>
+                        <div class="metric-trend" style="color: #ef4444;">
+                            <i class="fa-solid fa-bolt"></i> Average Triage: 4.2 mins
+                        </div>
+                    </div>
+
+                    <div class="metric-card reveal">
+                        <div class="metric-header">
+                            <span class="metric-title">Active Surgeries (OT)</span>
+                            <div class="metric-icon" style="background: rgba(147, 51, 234, 0.12); color: #9333ea;">
+                                <i class="fa-solid fa-stethoscope"></i>
+                            </div>
+                        </div>
+                        <div class="metric-value">6 Theaters Active</div>
+                        <div class="metric-trend" style="color: #9333ea;">
+                            <i class="fa-solid fa-robot"></i> 3 Robotic Suites Running
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live OT Status & Emergency Triage Grid -->
+                <div class="grid grid-2" style="margin-top: 24px; gap: 24px;">
+                    <!-- Operation Theater Status -->
+                    <div class="feature-card reveal" style="padding: 24px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                            <h3 style="font-size: 1.15rem; margin: 0;">Operation Theater (OT) Suites</h3>
+                            <span class="badge-pill" style="font-size: 0.7rem; background: rgba(16, 185, 129, 0.12); color: #10b981;">All Laminar Flow Active</span>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 12px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-alt);">
+                                <div>
+                                    <div style="font-weight: 700; font-size: 0.92rem;">OT Suite 1 — Robotic Cardiac Suite</div>
+                                    <div style="font-size: 0.78rem; color: var(--text-muted);">Procedure: Minimally Invasive CABG • Lead: Dr. Elena Rostova</div>
+                                </div>
+                                <span class="badge-pill" style="font-size: 0.72rem; background: rgba(239, 68, 68, 0.15); color: #ef4444;">In Progress (75m)</span>
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-alt);">
+                                <div>
+                                    <div style="font-weight: 700; font-size: 0.92rem;">OT Suite 2 — Robotic Orthopedic Bay</div>
+                                    <div style="font-size: 0.78rem; color: var(--text-muted);">Procedure: Mako Total Knee Replacement • Lead: Dr. Jonathan Reyes</div>
+                                </div>
+                                <span class="badge-pill" style="font-size: 0.72rem; background: rgba(239, 68, 68, 0.15); color: #ef4444;">In Progress (40m)</span>
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-alt);">
+                                <div>
+                                    <div style="font-weight: 700; font-size: 0.92rem;">OT Suite 3 — Neuro-Microscopic Suite</div>
+                                    <div style="font-size: 0.78rem; color: var(--text-muted);">Procedure: Endoscopic Disc Decompression • Lead: Dr. Marcus Vance</div>
+                                </div>
+                                <span class="badge-pill" style="font-size: 0.72rem; background: rgba(16, 185, 129, 0.15); color: #10b981;">Sterilized & Ready</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Emergency Admissions Triage Table -->
+                    <div class="feature-card reveal" style="padding: 24px;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                            <h3 style="font-size: 1.15rem; margin: 0;">Recent Emergency Admissions</h3>
+                            <button class="btn btn-outline btn-sm" onclick="showToast('Refreshing Emergency Triage stream...', 'info')">
+                                <i class="fa-solid fa-arrows-rotate"></i> Refresh
+                            </button>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 12px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-alt);">
+                                <div>
+                                    <div style="font-weight: 700; font-size: 0.92rem;">Patient #STK-91024 — Acute STEMI</div>
+                                    <div style="font-size: 0.78rem; color: var(--text-muted);">Triage Level 1 • Cath Lab Angioplasty Prep • 8 mins ago</div>
+                                </div>
+                                <span class="badge-pill" style="background: rgba(239, 68, 68, 0.15); color: #ef4444; font-size: 0.7rem;">Immediate Red</span>
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-alt);">
+                                <div>
+                                    <div style="font-weight: 700; font-size: 0.92rem;">Patient #STK-91023 — Poly-Trauma Fracture</div>
+                                    <div style="font-size: 0.78rem; color: var(--text-muted);">Triage Level 2 • Stabilized & CT Scanned • 25 mins ago</div>
+                                </div>
+                                <span class="badge-pill" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; font-size: 0.7rem;">Urgent Yellow</span>
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-alt);">
+                                <div>
+                                    <div style="font-weight: 700; font-size: 0.92rem;">Patient #STK-91022 — Pediatric High Fever</div>
+                                    <div style="font-size: 0.78rem; color: var(--text-muted);">Triage Level 3 • Admitted to Ward 4B • 45 mins ago</div>
+                                </div>
+                                <span class="badge-pill" style="background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.7rem;">Stable Green</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- On-Duty Doctor OPD Rosters Table -->
+                <div class="feature-card reveal" style="margin-top: 28px; padding: 26px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 12px;">
+                        <h3 style="font-size: 1.2rem; margin: 0;">Today's On-Duty Doctor OPD & Rounds Roster</h3>
+                        <span class="badge-pill" style="font-size: 0.72rem; background: rgba(2, 132, 199, 0.12); color: var(--primary);">12 Specialists Logged In</span>
+                    </div>
+
+                    <div style="overflow-x: auto;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 0.88rem; text-align: left;">
+                            <thead>
+                                <tr style="border-bottom: 2px solid var(--border-color); color: var(--text-muted);">
+                                    <th style="padding: 12px 14px;">Specialist</th>
+                                    <th style="padding: 12px 14px;">Department</th>
+                                    <th style="padding: 12px 14px;">OPD Room</th>
+                                    <th style="padding: 12px 14px;">Duty Hours</th>
+                                    <th style="padding: 12px 14px;">Queue</th>
+                                    <th style="padding: 12px 14px;">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr style="border-bottom: 1px solid var(--border-color);">
+                                    <td style="padding: 14px; font-weight: 700;">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=80&q=88" alt="Dr. Elena" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                                            <span>Dr. Elena Rostova</span>
+                                        </div>
+                                    </td>
+                                    <td style="padding: 14px; color: var(--text-muted);">Cardiology & Cath Lab</td>
+                                    <td style="padding: 14px;">OPD Wing 204</td>
+                                    <td style="padding: 14px; color: var(--text-muted);">09:00 AM - 02:00 PM</td>
+                                    <td style="padding: 14px; font-weight: 600;">14 Waiting</td>
+                                    <td style="padding: 14px;"><span class="badge-pill" style="font-size: 0.7rem; background: rgba(16, 185, 129, 0.15); color: #10b981;">In OPD</span></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--border-color);">
+                                    <td style="padding: 14px; font-weight: 700;">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=80&q=88" alt="Dr. Jonathan" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                                            <span>Dr. Jonathan Reyes</span>
+                                        </div>
+                                    </td>
+                                    <td style="padding: 14px; color: var(--text-muted);">Orthopedics & Joint</td>
+                                    <td style="padding: 14px;">Robotic OT 2</td>
+                                    <td style="padding: 14px; color: var(--text-muted);">08:00 AM - 01:00 PM</td>
+                                    <td style="padding: 14px; font-weight: 600;">In Surgery</td>
+                                    <td style="padding: 14px;"><span class="badge-pill" style="font-size: 0.7rem; background: rgba(239, 68, 68, 0.15); color: #ef4444;">In OT</span></td>
+                                </tr>
+                                <tr style="border-bottom: 1px solid var(--border-color);">
+                                    <td style="padding: 14px; font-weight: 700;">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=80&q=88" alt="Dr. Marcus" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                                            <span>Dr. Marcus Vance</span>
+                                        </div>
+                                    </td>
+                                    <td style="padding: 14px; color: var(--text-muted);">Neuro & Spine</td>
+                                    <td style="padding: 14px;">OPD Wing 310</td>
+                                    <td style="padding: 14px; color: var(--text-muted);">11:00 AM - 04:00 PM</td>
+                                    <td style="padding: 14px; font-weight: 600;">8 Waiting</td>
+                                    <td style="padding: 14px;"><span class="badge-pill" style="font-size: 0.7rem; background: rgba(16, 185, 129, 0.15); color: #10b981;">In OPD</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="padding: 14px; font-weight: 700;">
+                                        <div style="display: flex; align-items: center; gap: 10px;">
+                                            <img src="https://images.unsplash.com/photo-1594824813571-638f02614d3f?auto=format&fit=crop&w=80&q=88" alt="Dr. Aisha" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                                            <span>Dr. Aisha Patel</span>
+                                        </div>
+                                    </td>
+                                    <td style="padding: 14px; color: var(--text-muted);">Pediatrics & NICU</td>
+                                    <td style="padding: 14px;">Level-III NICU</td>
+                                    <td style="padding: 14px; color: var(--text-muted);">Round the clock</td>
+                                    <td style="padding: 14px; font-weight: 600;">NICU Rounds</td>
+                                    <td style="padding: 14px;"><span class="badge-pill" style="font-size: 0.7rem; background: rgba(2, 132, 199, 0.15); color: var(--primary);">On Rounds</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FULL HOSPITAL SITE FOOTER (ADDRESS ONLY IN FOOTER) -->
+            <footer class="site-footer" style="margin-top: 40px; border-radius: var(--radius-lg) var(--radius-lg) 0 0;">
+                <div class="container" style="max-width: 100%; padding: 0 30px;">
+                    <div class="footer-grid">
+                        <div class="footer-col footer-about">
+                            <a href="index.html" class="brand-logo" style="margin-bottom: 16px; display: inline-block;">
+                                <img src="assets/images/logo.png" alt="Hospital Logo" width="34" height="42" style="height: 42px; width: auto; object-fit: contain;">
+                            </a>
+                            <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; line-height: 1.7; margin-bottom: 20px;">
+                                Super Specialty Hospital Medical Command & Administrative Governance. Audited and certified under NABH and Joint Commission International standards.
+                            </p>
+                            <div class="social-links">
+                                <a href="404.html" class="social-icon linkedin" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="404.html" class="social-icon instagram" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="404.html" class="social-icon twitter" title="X (Twitter)" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="404.html" class="social-icon youtube" title="YouTube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="footer-col">
+                            <h4>Clinical Specialties</h4>
+                            <ul class="footer-links">
+                                <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Institute of Cardiac Sciences</a></li>
+                                <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Neurosciences & Stroke Bay</a></li>
+                                <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Orthopedics & Robotic Knee</a></li>
+                                <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Pediatrics & Level III NICU</a></li>
+                                <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Medical Oncology</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-col">
+                            <h4>Administrative Quick Links</h4>
+                            <ul class="footer-links">
+                                <li><a href="doctors.html"><i class="fa-solid fa-chevron-right"></i> Doctor Rosters & OPD</a></li>
+                                <li><a href="get-started.html"><i class="fa-solid fa-chevron-right"></i> Patient Registration</a></li>
+                                <li><a href="health-packages.html"><i class="fa-solid fa-chevron-right"></i> Health Checkup Packages</a></li>
+                                <li><a href="signin.html"><i class="fa-solid fa-chevron-right"></i> Sign Out Console</a></li>
+                                <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Emergency Ambulance Desk</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- ADDRESS ONLY IN FOOTER -->
+                        <div class="footer-col footer-newsletter">
+                            <h4>Hospital Location & Desk</h4>
+                            <ul class="footer-contact-list">
+                                <li>
+                                    <i class="fa-solid fa-location-dot" style="color: #38bdf8;"></i>
+                                    <span>45 Meyyanur Bypass Road, Near New Bus Stand, Salem - 636004, Tamil Nadu, India</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-truck-medical" style="color: #ef4444;"></i>
+                                    <span>24/7 Command Hotline: +91 98400 55500</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-phone" style="color: #38bdf8;"></i>
+                                    <span>Appointments: +91 (0427) 244-0199</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-envelope" style="color: #38bdf8;"></i>
+                                    <span>admin@stacklyhospital.com</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-bottom" style="margin-top: 30px;">
+                        <p>&copy; 2026 Super Specialty Hospital, Salem, Tamil Nadu, India. All rights reserved. (NABH & JCI Accredited)</p>
+                        <div class="footer-bottom-links">
+                            <a href="404.html">Privacy Policy</a>
+                            <a href="404.html">Patient Rights</a>
+                            <a href="404.html">Cashless TPA</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="back-to-top-btn" title="Back to Top" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="data/hospital-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

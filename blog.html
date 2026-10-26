@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Medical & Health Insights Blog - Authoritative articles on cardiac health, robotic joint replacement, stroke symptoms, pediatric care, and preventive medicine authored by senior consultant doctors.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+    <title>Health Blog & Medical Insights | Super Specialty Hospital</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- STICKY HEADER & NAVIGATION (ONLY LOGO, NO TEXT) -->
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="assets/images/logo.png" alt="Hospital Logo" width="36" height="44" style="height: 44px; width: auto; object-fit: contain;">
+            </a>
+
+            <nav class="nav-menu" id="siteNavMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Specialties</a>
+                <a href="doctors.html" class="nav-link">Doctors</a>
+                <a href="health-packages.html" class="nav-link">Health Packages</a>
+                <a href="blog.html" class="nav-link active">Health Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <div class="nav-actions-mobile">
+                    <a href="signin.html" class="btn btn-signin">Sign In</a>
+                    <a href="get-started.html" class="btn btn-primary">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="signin.html" class="btn btn-signin">Sign In</a>
+                <a href="get-started.html" class="btn btn-primary">
+                    <span>Get Started</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- PAGE BANNER -->
+        <section class="page-banner">
+            <div class="container">
+                <div class="reveal active">
+                    <h1>Health Blog & Medical Insights</h1>
+                    <div class="breadcrumb">
+                        <a href="index.html">Home</a>
+                        <i class="fa-solid fa-chevron-right" style="font-size: 0.75rem;"></i>
+                        <span>Health Blog</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG GRID -->
+        <section class="section">
+            <div class="container">
+                <div class="text-center reveal" style="max-width: 800px; margin: 0 auto 50px;">
+                    <div class="badge-pill">
+                        <i class="fa-solid fa-book-medical"></i>
+                        <span>Doctor-Authored Articles</span>
+                    </div>
+                    <h2 style="font-size: 2.2rem; margin: 16px 0 14px;">Evidence-Based Health Knowledge for You & Your Family</h2>
+                    <p style="color: var(--text-muted); line-height: 1.8;">
+                        Stay empowered with the latest preventive care guides, surgical innovations, and lifestyle medicine authored directly by our leading hospital specialists.
+                    </p>
+                </div>
+
+                <div class="grid grid-3" style="gap: 30px;">
+                    <!-- Blog Card 1 -->
+                    <article class="feature-card reveal" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=88" alt="Cardiology Golden Hour" style="width: 100%; height: 210px; object-fit: cover;">
+                        <div style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                                <span class="badge-pill" style="font-size: 0.7rem; background: rgba(2, 132, 199, 0.15); color: var(--primary);">Cardiology</span>
+                                <span style="font-size: 0.78rem; color: var(--text-muted);"><i class="fa-regular fa-clock"></i> 5 min read</span>
+                            </div>
+                            <h3 style="font-size: 1.2rem; line-height: 1.4; margin-bottom: 10px;">Understanding STEMI Heart Attacks: Why the Golden Hour Saves Heart Muscle</h3>
+                            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+                                Every minute following a coronary artery occlusion leads to irreversible myocardial tissue death. Learn how rapid door-to-balloon angioplasty restores blood flow.
+                            </p>
+                            <div style="display: flex; align-items: center; gap: 10px; padding-top: 14px; border-top: 1px solid var(--border-color);">
+                                <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=100&q=88" alt="Dr. Elena Rostova" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover;">
+                                <div style="font-size: 0.82rem;">
+                                    <strong>Dr. Elena Rostova</strong>
+                                    <div style="color: var(--text-muted); font-size: 0.75rem;">Chief Cardiologist</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 2 -->
+                    <article class="feature-card reveal" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=88" alt="Robotic Knee Replacement" style="width: 100%; height: 210px; object-fit: cover;">
+                        <div style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                                <span class="badge-pill" style="font-size: 0.7rem; background: rgba(16, 185, 129, 0.15); color: #10b981;">Orthopedics</span>
+                                <span style="font-size: 0.78rem; color: var(--text-muted);"><i class="fa-regular fa-clock"></i> 6 min read</span>
+                            </div>
+                            <h3 style="font-size: 1.2rem; line-height: 1.4; margin-bottom: 10px;">Robotic-Assisted Knee Surgery: Faster Recovery & Natural Joint Kinematics</h3>
+                            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+                                How 3D CT modeling and robotic haptic guidance allow millimeter-accurate implant placement, sparing soft tissue ligaments and speeding recovery.
+                            </p>
+                            <div style="display: flex; align-items: center; gap: 10px; padding-top: 14px; border-top: 1px solid var(--border-color);">
+                                <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=100&q=88" alt="Dr. Jonathan Reyes" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover;">
+                                <div style="font-size: 0.82rem;">
+                                    <strong>Dr. Jonathan Reyes</strong>
+                                    <div style="color: var(--text-muted); font-size: 0.75rem;">Joint Replacement Surgeon</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 3 -->
+                    <article class="feature-card reveal" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=88" alt="Stroke Symptoms" style="width: 100%; height: 210px; object-fit: cover;">
+                        <div style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                                <span class="badge-pill" style="font-size: 0.7rem; background: rgba(245, 158, 11, 0.15); color: #f59e0b;">Neuroscience</span>
+                                <span style="font-size: 0.78rem; color: var(--text-muted);"><i class="fa-regular fa-clock"></i> 4 min read</span>
+                            </div>
+                            <h3 style="font-size: 1.2rem; line-height: 1.4; margin-bottom: 10px;">Acute Ischemic Stroke: Recognizing F.A.S.T. Signs & IV Thrombolysis</h3>
+                            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+                                Facial drooping, arm weakness, and speech slurring require emergency hospital arrival within 4.5 hours for clot-dissolving tissue plasminogen activator (tPA).
+                            </p>
+                            <div style="display: flex; align-items: center; gap: 10px; padding-top: 14px; border-top: 1px solid var(--border-color);">
+                                <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=100&q=88" alt="Dr. Marcus Vance" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover;">
+                                <div style="font-size: 0.82rem;">
+                                    <strong>Dr. Marcus Vance</strong>
+                                    <div style="color: var(--text-muted); font-size: 0.75rem;">Neurosurgeon</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 4 -->
+                    <article class="feature-card reveal" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=88" alt="Pediatric Vaccines" style="width: 100%; height: 210px; object-fit: cover;">
+                        <div style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                                <span class="badge-pill" style="font-size: 0.7rem; background: rgba(147, 51, 234, 0.15); color: #9333ea;">Pediatrics</span>
+                                <span style="font-size: 0.78rem; color: var(--text-muted);"><i class="fa-regular fa-clock"></i> 5 min read</span>
+                            </div>
+                            <h3 style="font-size: 1.2rem; line-height: 1.4; margin-bottom: 10px;">Childhood Immunization Schedules: Protecting Your Newborn's Immunity</h3>
+                            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+                                An essential pediatrician roadmap for vaccines against rotavirus, pneumococcal disease, MMR, and seasonal influenza from birth to age 5.
+                            </p>
+                            <div style="display: flex; align-items: center; gap: 10px; padding-top: 14px; border-top: 1px solid var(--border-color);">
+                                <img src="https://images.unsplash.com/photo-1594824813571-638f02614d3f?auto=format&fit=crop&w=100&q=88" alt="Dr. Aisha Patel" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover;">
+                                <div style="font-size: 0.82rem;">
+                                    <strong>Dr. Aisha Patel</strong>
+                                    <div style="color: var(--text-muted); font-size: 0.75rem;">Pediatric Intensivist</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 5 -->
+                    <article class="feature-card reveal" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=88" alt="Preventive Screenings" style="width: 100%; height: 210px; object-fit: cover;">
+                        <div style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                                <span class="badge-pill" style="font-size: 0.7rem; background: rgba(2, 132, 199, 0.15); color: var(--primary);">Wellness</span>
+                                <span style="font-size: 0.78rem; color: var(--text-muted);"><i class="fa-regular fa-clock"></i> 7 min read</span>
+                            </div>
+                            <h3 style="font-size: 1.2rem; line-height: 1.4; margin-bottom: 10px;">Why Annual Executive Health Checks Catch Silent Killers Early</h3>
+                            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+                                Silent conditions like fatty liver, borderline diabetes, and subclinical atherosclerosis show zero symptoms until late stages. Routine screening is your shield.
+                            </p>
+                            <div style="display: flex; align-items: center; gap: 10px; padding-top: 14px; border-top: 1px solid var(--border-color);">
+                                <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=100&q=88" alt="Dr. Arthur Pendelton" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover;">
+                                <div style="font-size: 0.82rem;">
+                                    <strong>Dr. Arthur Pendelton</strong>
+                                    <div style="color: var(--text-muted); font-size: 0.75rem;">Medical Director</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Blog Card 6 -->
+                    <article class="feature-card reveal" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="https://images.unsplash.com/photo-1582719471384-894fbb16e074?auto=format&fit=crop&w=800&q=88" alt="Diet & Heart Health" style="width: 100%; height: 210px; object-fit: cover;">
+                        <div style="padding: 24px; display: flex; flex-direction: column; flex-grow: 1;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                                <span class="badge-pill" style="font-size: 0.7rem; background: rgba(16, 185, 129, 0.15); color: #10b981;">Clinical Dietetics</span>
+                                <span style="font-size: 0.78rem; color: var(--text-muted);"><i class="fa-regular fa-clock"></i> 4 min read</span>
+                            </div>
+                            <h3 style="font-size: 1.2rem; line-height: 1.4; margin-bottom: 10px;">Dietary DASH Protocol: Reducing Blood Pressure Without Heavy Meds</h3>
+                            <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 20px; flex-grow: 1;">
+                                Practical dietary modifications including sodium restriction, potassium-rich foods, and antioxidant superfoods recommended by our clinical dietetics team.
+                            </p>
+                            <div style="display: flex; align-items: center; gap: 10px; padding-top: 14px; border-top: 1px solid var(--border-color);">
+                                <img src="https://images.unsplash.com/photo-1594824813571-638f02614d3f?auto=format&fit=crop&w=100&q=88" alt="Dietetics Team" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover;">
+                                <div style="font-size: 0.82rem;">
+                                    <strong>Hospital Dietetics Dept</strong>
+                                    <div style="color: var(--text-muted); font-size: 0.75rem;">Clinical Nutrition Wing</div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (ONLY PLACE WHERE ADDRESS APPEARS) -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <a href="index.html" class="brand-logo" style="margin-bottom: 16px; display: inline-block;">
+                        <img src="assets/images/logo.png" alt="Hospital Logo" width="34" height="42" style="height: 42px; width: auto; object-fit: contain;">
+                    </a>
+                    <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; line-height: 1.7; margin-bottom: 20px;">
+                        A tertiary super specialty healthcare institute committed to clinical precision, NABH & JCI quality standards, and compassionate patient healing across Tamil Nadu.
+                    </p>
+                    <div class="social-links">
+                        <a href="404.html" class="social-icon linkedin" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404.html" class="social-icon instagram" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="404.html" class="social-icon twitter" title="X (Twitter)" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="404.html" class="social-icon youtube" title="YouTube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Clinical Centers</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Institute of Cardiac Sciences</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Neurosciences & Stroke Bay</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Orthopedics & Robotic Knee</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Pediatrics & Level III NICU</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Medical Oncology</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Patient Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="doctors.html"><i class="fa-solid fa-chevron-right"></i> Find a Specialist Doctor</a></li>
+                        <li><a href="get-started.html"><i class="fa-solid fa-chevron-right"></i> Get Started</a></li>
+                        <li><a href="health-packages.html"><i class="fa-solid fa-chevron-right"></i> Health Checkup Packages</a></li>
+                        <li><a href="signin.html"><i class="fa-solid fa-chevron-right"></i> Patient Medical Records</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Emergency Ambulance Desk</a></li>
+                    </ul>
+                </div>
+
+                <!-- ADDRESS ONLY IN FOOTER -->
+                <div class="footer-col footer-newsletter">
+                    <h4>Hospital Location & Desk</h4>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot" style="color: #38bdf8;"></i>
+                            <span>45 Meyyanur Bypass Road, Near New Bus Stand, Salem - 636004, Tamil Nadu, India</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-truck-medical" style="color: #ef4444;"></i>
+                            <span>24/7 Emergency: +91 98400 55500</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone" style="color: #38bdf8;"></i>
+                            <span>Appointments: +91 (0427) 244-0199</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope" style="color: #38bdf8;"></i>
+                            <span>care@stacklyhospital.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Super Specialty Hospital, Salem, Tamil Nadu, India. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Patient Rights</a>
+                    <a href="404.html">Cashless TPA</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="back-to-top-btn" title="Back to Top" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="data/hospital-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

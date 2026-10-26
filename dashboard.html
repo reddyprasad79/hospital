@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Client Healthcare Dashboard - View medical records, doctor appointments, lab reports, and active prescriptions.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+    <title>Client Health Dashboard | Healthcare Portal</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background: var(--bg-alt); margin: 0; padding: 0;">
+
+    <div class="dashboard-layout" style="display: flex; min-height: 100vh;">
+        <!-- Left Sidebar -->
+        <aside class="dashboard-sidebar" id="dashboardSidebar" style="width: 270px; background: var(--bg-card); border-right: 1px solid var(--border-color); padding: 24px 20px; display: flex; flex-direction: column; justify-content: space-between; flex-shrink: 0;">
+            <div>
+                <a href="index.html" class="brand-logo" style="display: flex; align-items: center; gap: 10px; text-decoration: none; margin-bottom: 28px;">
+                    <img src="assets/images/logo.png" alt="Hospital Logo" width="32" height="38" style="height: 38px; width: auto; object-fit: contain;">
+                </a>
+
+                <ul class="dashboard-menu" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px;">
+                    <li>
+                        <a href="dashboard.html" class="dashboard-menu-link active" style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: var(--radius-md); text-decoration: none; color: var(--primary); font-weight: 700; background: var(--primary-light);">
+                            <i class="fa-solid fa-notes-medical" style="font-size: 1.1rem;"></i>
+                            <span>Health Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#appointments" class="dashboard-menu-link" onclick="showToast('Upcoming OPD appointment confirmed with Dr. Elena', 'success')" style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: var(--radius-md); text-decoration: none; color: var(--text-main); font-weight: 600;">
+                            <i class="fa-solid fa-calendar-check" style="color: var(--primary); font-size: 1.1rem;"></i>
+                            <span>My Appointments</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#reports" class="dashboard-menu-link" onclick="showToast('Loading digital lab reports & ECG...', 'info')" style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: var(--radius-md); text-decoration: none; color: var(--text-main); font-weight: 600;">
+                            <i class="fa-solid fa-file-medical" style="color: #10b981; font-size: 1.1rem;"></i>
+                            <span>Diagnostic Reports</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#prescriptions" class="dashboard-menu-link" onclick="showToast('Prescription active: Refill request submitted', 'success')" style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: var(--radius-md); text-decoration: none; color: var(--text-main); font-weight: 600;">
+                            <i class="fa-solid fa-pills" style="color: #9333ea; font-size: 1.1rem;"></i>
+                            <span>Prescriptions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="get-started.html" class="dashboard-menu-link" style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: var(--radius-md); text-decoration: none; color: var(--text-main); font-weight: 600;">
+                            <i class="fa-solid fa-calendar-plus" style="color: #f59e0b; font-size: 1.1rem;"></i>
+                            <span>Book Specialist OPD</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="dashboard-menu-link" style="display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: var(--radius-md); text-decoration: none; color: var(--text-main); font-weight: 600; margin-top: 10px; border-top: 1px solid var(--border-color); padding-top: 16px;">
+                            <i class="fa-solid fa-house" style="color: var(--text-muted); font-size: 1.1rem;"></i>
+                            <span>Back to Hospital Site</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Client Profile Card -->
+            <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-color);">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=88" alt="Robert Callahan" style="width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary);">
+                    <div>
+                        <h5 style="margin: 0; font-size: 0.95rem; font-weight: 700;">Robert Callahan</h5>
+                        <p style="margin: 0; font-size: 0.78rem; color: var(--primary); font-weight: 600;">Client ID: #STK-84920</p>
+                    </div>
+                </div>
+                <a href="signin.html" class="btn btn-outline btn-sm" style="width: 100%; border-radius: var(--radius-md); justify-content: center;" onclick="showToast('Signed out of Client Portal', 'success')">
+                    <i class="fa-solid fa-arrow-right-from-bracket" style="margin-right: 6px;"></i>
+                    <span>Sign Out</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Dashboard Area -->
+        <div class="dashboard-main" style="flex: 1; display: flex; flex-direction: column; min-width: 0;">
+            <!-- Topbar -->
+            <header class="dashboard-topbar" style="background: var(--bg-card); border-bottom: 1px solid var(--border-color); padding: 14px 28px; display: flex; align-items: center; justify-content: space-between; gap: 16px;">
+                <div style="display: flex; align-items: center; gap: 16px; flex: 1;">
+                    <button class="mobile-nav-toggle" id="dashSidebarToggle" style="display: none; background: none; border: none; font-size: 1.3rem; color: var(--text-main); cursor: pointer;" aria-label="Toggle Sidebar">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div style="position: relative; max-width: 380px; width: 100%;">
+                        <i class="fa-solid fa-magnifying-glass" style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 0.9rem;"></i>
+                        <input type="text" placeholder="Search lab reports, doctors, prescriptions..." style="width: 100%; padding: 10px 14px 10px 38px; border-radius: var(--radius-full); border: 1px solid var(--border-color); background: var(--bg-alt); color: var(--text-main); font-size: 0.88rem;">
+                    </div>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <span class="badge-pill" style="background: rgba(16, 185, 129, 0.12); color: #10b981; border-color: rgba(16, 185, 129, 0.3);">
+                        <span class="pulse-dot" style="background: #10b981;"></span> Cashless TPA: Approved
+                    </span>
+                    <a href="get-started.html" class="btn btn-primary btn-sm">
+                        <i class="fa-solid fa-plus"></i> New Appointment
+                    </a>
+                </div>
+            </header>
+
+            <!-- Dashboard Content Container -->
+            <div class="dashboard-content" style="padding: 28px; flex: 1;">
+                <!-- Welcome Banner -->
+                <div class="welcome-banner reveal active" style="background: linear-gradient(135deg, #0284c7 0%, #0b1324 100%); padding: 30px; border-radius: var(--radius-lg); color: #ffffff; box-shadow: var(--shadow-md);">
+                    <div class="welcome-content">
+                        <span class="badge-pill" style="background: rgba(255, 255, 255, 0.15); color: #ffffff; border-color: rgba(255, 255, 255, 0.3); margin-bottom: 12px;">
+                            <i class="fa-solid fa-heart-pulse"></i> Patient Health Record #STK-84920
+                        </span>
+                        <h2 style="color: #ffffff; font-size: 1.9rem; margin: 10px 0;">Welcome Back, Robert!</h2>
+                        <p style="color: #e0f2fe; max-width: 650px; font-size: 0.95rem; line-height: 1.6; margin: 0 0 20px;">
+                            Your post-procedure cardiac recovery plan is on track. Your next consultation with <strong>Dr. Elena Rostova</strong> (Chief Interventional Cardiologist) is scheduled for <strong>Tomorrow at 10:30 AM</strong>.
+                        </p>
+                        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                            <a href="get-started.html" class="btn btn-primary btn-sm" style="background: #ffffff; color: #0284c7;">
+                                <i class="fa-solid fa-calendar-plus"></i> Book Specialist OPD
+                            </a>
+                            <a href="#reports" class="btn btn-outline btn-sm" style="color: #ffffff; border-color: #ffffff;">
+                                <i class="fa-solid fa-file-arrow-down"></i> Download Lab Reports
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 Patient Metrics Grid -->
+                <div class="grid grid-4" style="margin-top: 24px;">
+                    <div class="metric-card reveal" style="background: var(--bg-card); padding: 22px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Upcoming Visit</span>
+                            <div style="width: 38px; height: 38px; border-radius: 50%; background: rgba(2, 132, 199, 0.12); color: var(--primary); display: flex; align-items: center; justify-content: center;">
+                                <i class="fa-solid fa-stethoscope"></i>
+                            </div>
+                        </div>
+                        <div style="font-size: 1.7rem; font-weight: 800; color: var(--text-main); margin-bottom: 6px;">Tomorrow</div>
+                        <div style="color: var(--primary); font-size: 0.82rem; font-weight: 600;">
+                            <i class="fa-regular fa-clock"></i> 10:30 AM (Cardiology)
+                        </div>
+                    </div>
+
+                    <div class="metric-card reveal" style="background: var(--bg-card); padding: 22px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Lab Reports</span>
+                            <div style="width: 38px; height: 38px; border-radius: 50%; background: rgba(16, 185, 129, 0.12); color: #10b981; display: flex; align-items: center; justify-content: center;">
+                                <i class="fa-solid fa-file-medical"></i>
+                            </div>
+                        </div>
+                        <div style="font-size: 1.7rem; font-weight: 800; color: var(--text-main); margin-bottom: 6px;">3 New</div>
+                        <div style="color: #10b981; font-size: 0.82rem; font-weight: 600;">
+                            <i class="fa-solid fa-check"></i> 2D Echo & Lipid Profile
+                        </div>
+                    </div>
+
+                    <div class="metric-card reveal" style="background: var(--bg-card); padding: 22px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Active Prescriptions</span>
+                            <div style="width: 38px; height: 38px; border-radius: 50%; background: rgba(147, 51, 234, 0.12); color: #9333ea; display: flex; align-items: center; justify-content: center;">
+                                <i class="fa-solid fa-pills"></i>
+                            </div>
+                        </div>
+                        <div style="font-size: 1.7rem; font-weight: 800; color: var(--text-main); margin-bottom: 6px;">2 Active</div>
+                        <div style="color: #9333ea; font-size: 0.82rem; font-weight: 600;">
+                            <i class="fa-solid fa-capsules"></i> Refill in 14 days
+                        </div>
+                    </div>
+
+                    <div class="metric-card reveal" style="background: var(--bg-card); padding: 22px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Insurance Claim</span>
+                            <div style="width: 38px; height: 38px; border-radius: 50%; background: rgba(16, 185, 129, 0.12); color: #10b981; display: flex; align-items: center; justify-content: center;">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                        </div>
+                        <div style="font-size: 1.7rem; font-weight: 800; color: var(--text-main); margin-bottom: 6px;">100% Cashless</div>
+                        <div style="color: #10b981; font-size: 0.82rem; font-weight: 600;">
+                            <i class="fa-solid fa-circle-check"></i> BlueCross Pre-Approved
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Appointments & Diagnostic Lab Reports Grid -->
+                <div class="grid grid-2" style="margin-top: 28px; gap: 24px;">
+                    <!-- Appointments Card -->
+                    <div class="feature-card reveal" id="appointments" style="padding: 26px; background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                            <h3 style="font-size: 1.2rem; margin: 0;">My Doctor Consultations</h3>
+                            <a href="get-started.html" class="btn btn-outline btn-sm">Book OPD</a>
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 14px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-alt);">
+                                <div style="display: flex; align-items: center; gap: 14px;">
+                                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=150&q=88" alt="Dr. Elena Rostova" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
+                                    <div>
+                                        <div style="font-weight: 700; font-size: 0.95rem;">Dr. Elena Rostova</div>
+                                        <div style="font-size: 0.8rem; color: var(--primary); font-weight: 600;">Chief Interventional Cardiologist</div>
+                                        <div style="font-size: 0.78rem; color: var(--text-muted);"><i class="fa-regular fa-clock"></i> Tomorrow, 10:30 AM (OPD Room 204)</div>
+                                    </div>
+                                </div>
+                                <span class="badge-pill" style="font-size: 0.72rem; padding: 3px 10px; background: rgba(16, 185, 129, 0.12); color: #10b981;">Confirmed</span>
+                            </div>
+
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-alt);">
+                                <div style="display: flex; align-items: center; gap: 14px;">
+                                    <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=150&q=88" alt="Dr. Jonathan Reyes" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover;">
+                                    <div>
+                                        <div style="font-weight: 700; font-size: 0.95rem;">Dr. Jonathan Reyes</div>
+                                        <div style="font-size: 0.8rem; color: var(--primary); font-weight: 600;">Orthopedics & Joint Clinic</div>
+                                        <div style="font-size: 0.78rem; color: var(--text-muted);"><i class="fa-regular fa-clock"></i> Nov 02, 02:00 PM (Rehab Wing 1B)</div>
+                                    </div>
+                                </div>
+                                <span class="badge-pill" style="font-size: 0.72rem; padding: 3px 10px; background: rgba(2, 132, 199, 0.12); color: var(--primary);">Scheduled</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Digital Lab Reports Card -->
+                    <div class="feature-card reveal" id="reports" style="padding: 26px; background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                            <h3 style="font-size: 1.2rem; margin: 0;">Diagnostic Lab Reports</h3>
+                            <span class="badge-pill" style="font-size: 0.72rem;">NABH Certified Lab</span>
+                        </div>
+                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px;">
+                            <li style="display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-alt);">
+                                <div>
+                                    <div style="font-weight: 600; font-size: 0.9rem;"><i class="fa-solid fa-file-pdf" style="color: #ef4444; margin-right: 8px;"></i> 2D Doppler Echocardiography Report</div>
+                                    <div style="font-size: 0.76rem; color: var(--text-muted);">Lead: Dr. Elena Rostova • Oct 24, 2026</div>
+                                </div>
+                                <button class="btn btn-outline btn-sm" onclick="showToast('Downloading 2D Echo PDF...', 'success')">
+                                    <i class="fa-solid fa-download"></i> PDF
+                                </button>
+                            </li>
+
+                            <li style="display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-alt);">
+                                <div>
+                                    <div style="font-weight: 600; font-size: 0.9rem;"><i class="fa-solid fa-file-pdf" style="color: #ef4444; margin-right: 8px;"></i> Comprehensive Lipid Panel & Blood Profile</div>
+                                    <div style="font-size: 0.76rem; color: var(--text-muted);">Automated Pathology Lab • Oct 22, 2026</div>
+                                </div>
+                                <button class="btn btn-outline btn-sm" onclick="showToast('Downloading Lipid Panel PDF...', 'success')">
+                                    <i class="fa-solid fa-download"></i> PDF
+                                </button>
+                            </li>
+
+                            <li style="display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-alt);">
+                                <div>
+                                    <div style="font-weight: 600; font-size: 0.9rem;"><i class="fa-solid fa-file-pdf" style="color: #ef4444; margin-right: 8px;"></i> Digital Chest X-Ray PA View</div>
+                                    <div style="font-size: 0.76rem; color: var(--text-muted);">Department of Radiology • Oct 20, 2026</div>
+                                </div>
+                                <button class="btn btn-outline btn-sm" onclick="showToast('Downloading Chest X-Ray report...', 'success')">
+                                    <i class="fa-solid fa-download"></i> PDF
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Active Prescriptions Section -->
+                <div class="feature-card reveal" id="prescriptions" style="margin-top: 28px; padding: 26px; background: var(--bg-card); border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                        <h3 style="font-size: 1.2rem; margin: 0;">Active Prescriptions & Medications</h3>
+                        <button class="btn btn-primary btn-sm" onclick="showToast('Refill request sent to 24/7 Hospital Pharmacy', 'success')">
+                            <i class="fa-solid fa-pills"></i> Request Refill
+                        </button>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div style="padding: 16px; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-alt);">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                <span style="font-weight: 700; font-size: 1rem; color: var(--text-main);">Atorvastatin 20mg</span>
+                                <span class="badge-pill" style="font-size: 0.7rem; background: rgba(2, 132, 199, 0.12); color: var(--primary);">Daily (Night)</span>
+                            </div>
+                            <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0 0 10px;">Prescribed for cardiovascular lipid management by Dr. Elena Rostova.</p>
+                            <div style="font-size: 0.78rem; color: var(--text-muted);">Remaining: 14 Tablets • Refill in 14 days</div>
+                        </div>
+
+                        <div style="padding: 16px; border: 1px solid var(--border-color); border-radius: var(--radius-md); background: var(--bg-alt);">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                <span style="font-weight: 700; font-size: 1rem; color: var(--text-main);">Ecosprin AV 75mg</span>
+                                <span class="badge-pill" style="font-size: 0.7rem; background: rgba(16, 185, 129, 0.12); color: #10b981;">Daily (Morning)</span>
+                            </div>
+                            <p style="font-size: 0.82rem; color: var(--text-muted); margin: 0 0 10px;">Anti-platelet therapy following coronary stenting.</p>
+                            <div style="font-size: 0.78rem; color: var(--text-muted);">Remaining: 18 Capsules • Refill in 18 days</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FULL HOSPITAL SITE FOOTER (ADDRESS ONLY IN FOOTER) -->
+            <footer class="site-footer" style="margin-top: 40px; border-radius: var(--radius-lg) var(--radius-lg) 0 0;">
+                <div class="container" style="max-width: 100%; padding: 0 30px;">
+                    <div class="footer-grid">
+                        <div class="footer-col footer-about">
+                            <a href="index.html" class="brand-logo" style="margin-bottom: 16px; display: inline-block;">
+                                <img src="assets/images/logo.png" alt="Hospital Logo" width="34" height="42" style="height: 42px; width: auto; object-fit: contain;">
+                            </a>
+                            <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; line-height: 1.7; margin-bottom: 20px;">
+                                A tertiary super specialty healthcare institute committed to clinical precision, NABH & JCI quality standards, and compassionate patient healing across Tamil Nadu.
+                            </p>
+                            <div class="social-links">
+                                <a href="404.html" class="social-icon linkedin" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="404.html" class="social-icon instagram" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="404.html" class="social-icon twitter" title="X (Twitter)" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="404.html" class="social-icon youtube" title="YouTube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="footer-col">
+                            <h4>Clinical Specialties</h4>
+                            <ul class="footer-links">
+                                <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Institute of Cardiac Sciences</a></li>
+                                <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Neurosciences & Stroke Bay</a></li>
+                                <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Orthopedics & Robotic Knee</a></li>
+                                <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Pediatrics & Level III NICU</a></li>
+                                <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Medical Oncology</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="footer-col">
+                            <h4>Patient Quick Links</h4>
+                            <ul class="footer-links">
+                                <li><a href="doctors.html"><i class="fa-solid fa-chevron-right"></i> Find a Specialist Doctor</a></li>
+                                <li><a href="get-started.html"><i class="fa-solid fa-chevron-right"></i> Get Started</a></li>
+                                <li><a href="health-packages.html"><i class="fa-solid fa-chevron-right"></i> Health Checkup Packages</a></li>
+                                <li><a href="signin.html"><i class="fa-solid fa-chevron-right"></i> Patient Medical Records</a></li>
+                                <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Emergency Ambulance Desk</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- ADDRESS ONLY IN FOOTER -->
+                        <div class="footer-col footer-newsletter">
+                            <h4>Hospital Location & Desk</h4>
+                            <ul class="footer-contact-list">
+                                <li>
+                                    <i class="fa-solid fa-location-dot" style="color: #38bdf8;"></i>
+                                    <span>45 Meyyanur Bypass Road, Near New Bus Stand, Salem - 636004, Tamil Nadu, India</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-truck-medical" style="color: #ef4444;"></i>
+                                    <span>24/7 Emergency: +91 98400 55500</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-phone" style="color: #38bdf8;"></i>
+                                    <span>Appointments: +91 (0427) 244-0199</span>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-envelope" style="color: #38bdf8;"></i>
+                                    <span>care@stacklyhospital.com</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-bottom" style="margin-top: 30px;">
+                        <p>&copy; 2026 Super Specialty Hospital, Salem, Tamil Nadu, India. All rights reserved. (NABH & JCI Accredited)</p>
+                        <div class="footer-bottom-links">
+                            <a href="404.html">Privacy Policy</a>
+                            <a href="404.html">Patient Rights</a>
+                            <a href="404.html">Cashless TPA</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="back-to-top-btn" title="Back to Top" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="data/hospital-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign In - Client & Admin Healthcare Portal.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+    <title>Sign In | Healthcare Portal</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- STICKY HEADER & NAVIGATION -->
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="assets/images/logo.png" alt="Hospital Logo" width="36" height="44" style="height: 44px; width: auto; object-fit: contain;">
+            </a>
+
+            <nav class="nav-menu" id="siteNavMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Specialties</a>
+                <a href="doctors.html" class="nav-link">Doctors</a>
+                <a href="health-packages.html" class="nav-link">Health Packages</a>
+                <a href="blog.html" class="nav-link">Health Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <div class="nav-actions-mobile">
+                    <a href="signin.html" class="btn btn-signin active">Sign In</a>
+                    <a href="get-started.html" class="btn btn-primary">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="signin.html" class="btn btn-signin active" style="background: var(--primary-light); color: var(--primary);">Sign In</a>
+                <a href="get-started.html" class="btn btn-primary">
+                    <span>Get Started</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="auth-wrapper" style="padding: 60px 0;">
+        <div class="container" style="max-width: 960px;">
+            <div class="auth-container reveal active" style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 0; background: var(--bg-card); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-xl); border: 1px solid var(--border-color);">
+                <!-- Left Info Column -->
+                <div class="auth-sidebar" style="background: linear-gradient(135deg, #0b1324 0%, #0369a1 100%); padding: 40px; color: #ffffff; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <span class="badge-pill" style="background: rgba(255, 255, 255, 0.15); color: #ffffff; border-color: rgba(255, 255, 255, 0.3); margin-bottom: 20px;">
+                            <i class="fa-solid fa-lock"></i> Encrypted Access Portal
+                        </span>
+                        <h2 style="color: #ffffff; font-size: 1.85rem; margin-bottom: 14px;">Welcome Back to Healthcare Portal</h2>
+                        <p style="color: #e0f2fe; font-size: 0.92rem; line-height: 1.6; margin-bottom: 24px;">
+                            Sign in with your role to access your personalized medical console and dashboard.
+                        </p>
+
+                        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; font-size: 0.88rem; color: #f0f9ff;">
+                            <li><i class="fa-solid fa-circle-check" style="color: #38bdf8; margin-right: 8px;"></i> <strong>Client:</strong> View appointments, test reports, prescriptions</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #38bdf8; margin-right: 8px;"></i> <strong>Admin:</strong> Real-time hospital beds, triage & OT monitor</li>
+                            <li><i class="fa-solid fa-circle-check" style="color: #38bdf8; margin-right: 8px;"></i> 100% Mobile Responsive for touch screens</li>
+                        </ul>
+                    </div>
+
+                    <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.15); font-size: 0.82rem; color: #bae6fd;">
+                        <i class="fa-solid fa-shield-halved" style="margin-right: 6px;"></i> NABH & JCI Certified Secure Health System
+                    </div>
+                </div>
+
+                <!-- Right Form Column -->
+                <div class="auth-form-side" style="padding: 40px;">
+                    <div class="auth-header" style="margin-bottom: 24px;">
+                        <h3 id="authTitle" style="font-size: 1.6rem; margin-bottom: 6px;">Portal Sign In</h3>
+                        <p id="authSubtitle" style="color: var(--text-muted); font-size: 0.88rem;">Select your role to access your dedicated dashboard</p>
+                    </div>
+
+                    <!-- Only Client and Admin Role Selector -->
+                    <div class="role-selector" style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px;">
+                        <button type="button" class="btn btn-outline active" id="clientRoleBtn" onclick="selectRole('client')" style="padding: 12px; border-radius: var(--radius-md); font-weight: 700; width: 100%; border-color: var(--primary); background: var(--primary-light); color: var(--primary);">
+                            <i class="fa-solid fa-user"></i>
+                            <span>Client</span>
+                        </button>
+                        <button type="button" class="btn btn-outline" id="adminRoleBtn" onclick="selectRole('admin')" style="padding: 12px; border-radius: var(--radius-md); font-weight: 700; width: 100%;">
+                            <i class="fa-solid fa-user-shield"></i>
+                            <span>Admin</span>
+                        </button>
+                    </div>
+
+                    <form id="signinForm" onsubmit="event.preventDefault(); handleRoleLogin();">
+                        <input type="hidden" id="selectedRole" value="client">
+
+                        <div style="margin-bottom: 18px;">
+                            <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;" id="emailLabel">Client Email / ID</label>
+                            <input type="text" id="signinEmail" class="newsletter-input" style="width: 100%; border: 1px solid var(--border-color); background: var(--bg-alt); color: var(--text-main);" value="client.robert@stacklyhospital.com" required>
+                        </div>
+
+                        <div style="margin-bottom: 18px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                                <label style="font-size: 0.85rem; font-weight: 600; margin: 0;">Password</label>
+                                <a href="404.html" style="font-size: 0.8rem; color: var(--primary);">Forgot password?</a>
+                            </div>
+                            <input type="password" id="signinPassword" class="newsletter-input" style="width: 100%; border: 1px solid var(--border-color); background: var(--bg-alt); color: var(--text-main);" value="HealthCare2026!" required>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 22px;">
+                            <input type="checkbox" id="rememberMe" checked style="accent-color: var(--primary); width: 16px; height: 16px;">
+                            <label for="rememberMe" style="font-size: 0.85rem; color: var(--text-muted); cursor: pointer;">Remember this device</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;" id="submitSignInBtn">
+                            <span id="signInBtnText">Sign In as Client</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px;">
+                            <a href="dashboard.html" class="btn btn-outline btn-sm" style="display: flex; align-items: center; justify-content: center; gap: 6px; padding: 10px;">
+                                <i class="fa-solid fa-user" style="color: var(--primary);"></i>
+                                <span>Client Demo</span>
+                            </a>
+                            <a href="admin-dashboard.html" class="btn btn-outline btn-sm" style="display: flex; align-items: center; justify-content: center; gap: 6px; padding: 10px;">
+                                <i class="fa-solid fa-user-shield" style="color: #10b981;"></i>
+                                <span>Admin Demo</span>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- SITE FOOTER (ADDRESS ONLY IN FOOTER) -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <a href="index.html" class="brand-logo" style="margin-bottom: 16px;">
+                        <img src="assets/images/logo.png" alt="Hospital Logo" width="34" height="42" style="height: 42px; width: auto; object-fit: contain;">
+                    </a>
+                    <p>
+                        Super Specialty Hospital is committed to clinical excellence, patient safety, and compassionate quaternary care.
+                    </p>
+                    <div class="social-links">
+                        <a href="404.html" class="social-icon linkedin" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404.html" class="social-icon instagram" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="404.html" class="social-icon twitter" title="X (Twitter)" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="404.html" class="social-icon youtube" title="YouTube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Clinical Specialties</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Cardiology & Heart Surgery</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Neurology & Stroke Unit</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Orthopedics & Robotic Knee</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Pediatrics & Level III NICU</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Medical Oncology</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Patient Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="doctors.html"><i class="fa-solid fa-chevron-right"></i> Find a Specialist Doctor</a></li>
+                        <li><a href="get-started.html"><i class="fa-solid fa-chevron-right"></i> Get Started</a></li>
+                        <li><a href="health-packages.html"><i class="fa-solid fa-chevron-right"></i> Health Checkup Packages</a></li>
+                        <li><a href="signin.html"><i class="fa-solid fa-chevron-right"></i> Client Medical Portal</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Emergency Ambulance Desk</a></li>
+                    </ul>
+                </div>
+
+                <!-- ADDRESS ONLY IN FOOTER -->
+                <div class="footer-col footer-newsletter">
+                    <h4>Hospital Location & Desk</h4>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot" style="color: #38bdf8;"></i>
+                            <span>45 Meyyanur Bypass Road, Near New Bus Stand, Salem - 636004, Tamil Nadu, India</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-truck-medical" style="color: #ef4444;"></i>
+                            <span>24/7 Emergency: +91 98400 55500</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone" style="color: #38bdf8;"></i>
+                            <span>Appointments: +91 (0427) 244-0199</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope" style="color: #38bdf8;"></i>
+                            <span>care@stacklyhospital.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Super Specialty Hospital, Salem, Tamil Nadu, India. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Patient Rights</a>
+                    <a href="404.html">Cashless TPA</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="back-to-top-btn" title="Back to Top" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+        function selectRole(role) {
+            const clientBtn = document.getElementById('clientRoleBtn');
+            const adminBtn = document.getElementById('adminRoleBtn');
+            const roleInput = document.getElementById('selectedRole');
+            const emailInput = document.getElementById('signinEmail');
+            const btnText = document.getElementById('signInBtnText');
+            const emailLabel = document.getElementById('emailLabel');
+
+            if (role === 'admin') {
+                clientBtn.classList.remove('active');
+                clientBtn.style.background = 'transparent';
+                clientBtn.style.color = 'var(--text-main)';
+                clientBtn.style.borderColor = 'var(--border-color)';
+
+                adminBtn.classList.add('active');
+                adminBtn.style.background = 'rgba(16, 185, 129, 0.12)';
+                adminBtn.style.color = '#10b981';
+                adminBtn.style.borderColor = '#10b981';
+
+                roleInput.value = 'admin';
+                emailLabel.innerText = 'Admin Email / Staff ID';
+                emailInput.value = 'admin.pendelton@stacklyhospital.com';
+                btnText.innerText = 'Sign In as Admin';
+            } else {
+                adminBtn.classList.remove('active');
+                adminBtn.style.background = 'transparent';
+                adminBtn.style.color = 'var(--text-main)';
+                adminBtn.style.borderColor = 'var(--border-color)';
+
+                clientBtn.classList.add('active');
+                clientBtn.style.background = 'var(--primary-light)';
+                clientBtn.style.color = 'var(--primary)';
+                clientBtn.style.borderColor = 'var(--primary)';
+
+                roleInput.value = 'client';
+                emailLabel.innerText = 'Client Email / Patient ID';
+                emailInput.value = 'client.robert@stacklyhospital.com';
+                btnText.innerText = 'Sign In as Client';
+            }
+        }
+
+        function handleRoleLogin() {
+            const role = document.getElementById('selectedRole').value;
+            if (role === 'admin') {
+                window.location.href = 'admin-dashboard.html';
+            } else {
+                window.location.href = 'dashboard.html';
+            }
+        }
+    </script>
+    <script src="data/hospital-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

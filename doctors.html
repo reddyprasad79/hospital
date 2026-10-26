@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Specialist Doctors & Medical Consultants Directory. Renowned cardiologists, neurosurgeons, oncologists, and pediatricians at Super Specialty Hospital Salem.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+    <title>Specialist Doctors & Consultants | Super Specialty Hospital</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- STICKY HEADER & NAVIGATION (ONLY LOGO, NO TEXT) -->
+    <header class="site-header" id="siteHeader">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <img src="assets/images/logo.png" alt="Hospital Logo" width="36" height="44" style="height: 44px; width: auto; object-fit: contain;">
+            </a>
+
+            <nav class="nav-menu" id="siteNavMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="services.html" class="nav-link">Specialties</a>
+                <a href="doctors.html" class="nav-link active">Doctors</a>
+                <a href="health-packages.html" class="nav-link">Health Packages</a>
+                <a href="blog.html" class="nav-link">Health Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <div class="nav-actions-mobile">
+                    <a href="signin.html" class="btn btn-signin">Sign In</a>
+                    <a href="get-started.html" class="btn btn-primary">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="signin.html" class="btn btn-signin">Sign In</a>
+                <a href="get-started.html" class="btn btn-primary">
+                    <span>Get Started</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- PAGE BANNER -->
+        <section class="page-banner">
+            <div class="container">
+                <div class="reveal active">
+                    <h1>Specialist Doctors & Medical Consultants</h1>
+                    <div class="breadcrumb">
+                        <a href="index.html">Home</a>
+                        <i class="fa-solid fa-chevron-right" style="font-size: 0.75rem;"></i>
+                        <span>Doctors Directory</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOCTORS DIRECTORY -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <div class="badge-pill">
+                        <i class="fa-solid fa-user-doctor"></i>
+                        <span>Medical Specialists</span>
+                    </div>
+                    <h2 class="section-title">Consult With Renowned Specialists</h2>
+                    <p class="section-desc">
+                        120+ internationally board-certified medical doctors, fellows of prestigious global institutions, dedicated to compassionate healing and clinical excellence.
+                    </p>
+                </div>
+
+                <div class="grid grid-4" style="gap: 28px;">
+                    <!-- Doctor 1 -->
+                    <div class="doctor-card reveal">
+                        <div class="doctor-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=88" alt="Dr. Elena Rostova">
+                            <span class="doctor-dept-badge">Cardiology</span>
+                            <span class="doctor-exp-badge">18+ Yrs Exp</span>
+                        </div>
+                        <div class="doctor-body">
+                            <h3>Dr. Elena Rostova</h3>
+                            <div class="doctor-degree">MD, DM, FACC, FSCAI (Harvard)</div>
+                            <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px;">Chief Interventional Cardiologist. Authority in coronary bifurcation stenting & TAVR valve repair.</p>
+                            <div class="doctor-opd">
+                                <i class="fa-regular fa-clock" style="color: var(--primary);"></i> Mon, Wed, Fri (9AM - 2PM)
+                            </div>
+                            <a href="get-started.html" class="btn btn-primary btn-sm" style="margin-top: auto;">Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 2 -->
+                    <div class="doctor-card reveal">
+                        <div class="doctor-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=900&q=88" alt="Dr. Marcus Vance">
+                            <span class="doctor-dept-badge">Neuro & Spine</span>
+                            <span class="doctor-exp-badge">20+ Yrs Exp</span>
+                        </div>
+                        <div class="doctor-body">
+                            <h3>Dr. Marcus Vance</h3>
+                            <div class="doctor-degree">MBBS, MS, MCh (Johns Hopkins)</div>
+                            <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px;">Head of Neurosurgery. Specializes in microscopic brain tumor resection & minimally invasive spine stabilization.</p>
+                            <div class="doctor-opd">
+                                <i class="fa-regular fa-clock" style="color: var(--primary);"></i> Tue, Thu, Sat (10AM - 3PM)
+                            </div>
+                            <a href="get-started.html" class="btn btn-primary btn-sm" style="margin-top: auto;">Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 3 -->
+                    <div class="doctor-card reveal">
+                        <div class="doctor-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1594824813511-583594191630?auto=format&fit=crop&w=900&q=88" alt="Dr. Sarah Chen">
+                            <span class="doctor-dept-badge">Pediatrics</span>
+                            <span class="doctor-exp-badge">15+ Yrs Exp</span>
+                        </div>
+                        <div class="doctor-body">
+                            <h3>Dr. Sarah Chen</h3>
+                            <div class="doctor-degree">MD Pediatrics, FAAP (Stanford)</div>
+                            <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px;">Director of Pediatric Intensive Care. Pioneer in neonatal ventilation & complex congenital disorder management.</p>
+                            <div class="doctor-opd">
+                                <i class="fa-regular fa-clock" style="color: var(--primary);"></i> Mon to Fri (8AM - 1PM)
+                            </div>
+                            <a href="get-started.html" class="btn btn-primary btn-sm" style="margin-top: auto;">Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 4 -->
+                    <div class="doctor-card reveal">
+                        <div class="doctor-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=900&q=88" alt="Dr. Jonathan Reyes">
+                            <span class="doctor-dept-badge">Orthopedics</span>
+                            <span class="doctor-exp-badge">17+ Yrs Exp</span>
+                        </div>
+                        <div class="doctor-body">
+                            <h3>Dr. Jonathan Reyes</h3>
+                            <div class="doctor-degree">MS Ortho, FRCS (Mayo Clinic)</div>
+                            <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px;">Chief Robotic Joint Surgeon. Leading Mako robotic total knee and hip replacement specialist.</p>
+                            <div class="doctor-opd">
+                                <i class="fa-regular fa-clock" style="color: var(--primary);"></i> Mon, Tue, Thu (11AM - 4PM)
+                            </div>
+                            <a href="get-started.html" class="btn btn-primary btn-sm" style="margin-top: auto;">Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 5 -->
+                    <div class="doctor-card reveal">
+                        <div class="doctor-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=88" alt="Dr. Priya Natarajan">
+                            <span class="doctor-dept-badge">Medical Oncology</span>
+                            <span class="doctor-exp-badge">14+ Yrs Exp</span>
+                        </div>
+                        <div class="doctor-body">
+                            <h3>Dr. Priya Natarajan</h3>
+                            <div class="doctor-degree">MD, DM (Medical Oncology - AIIMS)</div>
+                            <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px;">Comprehensive cancer care specialist focusing on immunotherapy, targeted targeted oncology, and solid tumors.</p>
+                            <div class="doctor-opd">
+                                <i class="fa-regular fa-clock" style="color: var(--primary);"></i> Mon to Sat (10AM - 3PM)
+                            </div>
+                            <a href="get-started.html" class="btn btn-primary btn-sm" style="margin-top: auto;">Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 6 -->
+                    <div class="doctor-card reveal">
+                        <div class="doctor-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=900&q=88" alt="Dr. Rajesh Sundaram">
+                            <span class="doctor-dept-badge">Gastroenterology</span>
+                            <span class="doctor-exp-badge">16+ Yrs Exp</span>
+                        </div>
+                        <div class="doctor-body">
+                            <h3>Dr. Rajesh Sundaram</h3>
+                            <div class="doctor-degree">MD, DM (Gastroenterology), FRCP</div>
+                            <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px;">Senior Hepatologist & Advanced Endoscopist. Expert in therapeutic ERCP and liver disease management.</p>
+                            <div class="doctor-opd">
+                                <i class="fa-regular fa-clock" style="color: var(--primary);"></i> Tue, Wed, Fri (9AM - 1PM)
+                            </div>
+                            <a href="get-started.html" class="btn btn-primary btn-sm" style="margin-top: auto;">Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 7 -->
+                    <div class="doctor-card reveal">
+                        <div class="doctor-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1594824813511-583594191630?auto=format&fit=crop&w=900&q=88" alt="Dr. Kavitha Menon">
+                            <span class="doctor-dept-badge">Obstetrics & Gynaec</span>
+                            <span class="doctor-exp-badge">15+ Yrs Exp</span>
+                        </div>
+                        <div class="doctor-body">
+                            <h3>Dr. Kavitha Menon</h3>
+                            <div class="doctor-degree">MS (OBG), DNB, Fellowship in Fetal Med</div>
+                            <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px;">High-risk pregnancy consultant, advanced laparoscopic gynecological surgeon and fetal medicine expert.</p>
+                            <div class="doctor-opd">
+                                <i class="fa-regular fa-clock" style="color: var(--primary);"></i> Mon, Wed, Sat (9AM - 2PM)
+                            </div>
+                            <a href="get-started.html" class="btn btn-primary btn-sm" style="margin-top: auto;">Get Started</a>
+                        </div>
+                    </div>
+
+                    <!-- Doctor 8 -->
+                    <div class="doctor-card reveal">
+                        <div class="doctor-img-wrap">
+                            <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=900&q=88" alt="Dr. Arthur Pendelton">
+                            <span class="doctor-dept-badge">Emergency Medicine</span>
+                            <span class="doctor-exp-badge">22+ Yrs Exp</span>
+                        </div>
+                        <div class="doctor-body">
+                            <h3>Dr. Arthur Pendelton</h3>
+                            <div class="doctor-degree">MD, FACEM, CEO & Medical Director</div>
+                            <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px;">Chief Trauma & Critical Care Specialist overseeing 24/7 Level-1 emergency resuscitation bays and ICU.</p>
+                            <div class="doctor-opd">
+                                <i class="fa-regular fa-clock" style="color: var(--primary);"></i> On-Call 24/7 (Level 1 Trauma)
+                            </div>
+                            <a href="get-started.html" class="btn btn-primary btn-sm" style="margin-top: auto;">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PATIENT CONSULTATION WORKFLOW & FAQ -->
+                <div class="feature-card reveal" style="margin-top: 50px; padding: 36px; background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-alt) 100%);">
+                    <div class="text-center" style="max-width: 700px; margin: 0 auto 30px;">
+                        <div class="badge-pill" style="margin-bottom: 12px;">
+                            <i class="fa-solid fa-hospital-user"></i> OPD Experience
+                        </div>
+                        <h3 style="font-size: 1.6rem; margin-bottom: 8px;">What to Expect During Your Doctor Consultation</h3>
+                        <p style="color: var(--text-muted); font-size: 0.92rem;">Streamlined patient check-in, dedicated nursing triage, and direct consultation with senior consultants.</p>
+                    </div>
+
+                    <div class="grid grid-3" style="gap: 24px;">
+                        <div style="padding: 20px; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                            <div style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 8px;"><i class="fa-solid fa-clock"></i> 1. Zero Waiting Check-In</div>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin: 0;">Show your appointment token at Front Desk Counter 2 for instant biometric registration and vital signs check.</p>
+                        </div>
+
+                        <div style="padding: 20px; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                            <div style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 8px;"><i class="fa-solid fa-stethoscope"></i> 2. In-Depth Clinical Evaluation</div>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin: 0;">Comprehensive 25-minute one-on-one session with your treating doctor, including review of previous scans.</p>
+                        </div>
+
+                        <div style="padding: 20px; background: var(--bg-card); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                            <div style="font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 8px;"><i class="fa-solid fa-prescription"></i> 3. Digital Prescription & Follow-up</div>
+                            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin: 0;">Instant electronic prescription delivered to your WhatsApp/SMS with online pharmacy delivery option.</p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 30px; text-align: center;">
+                        <a href="get-started.html" class="btn btn-primary" style="padding: 14px 32px; font-size: 1rem;">
+                            <i class="fa-solid fa-calendar-check"></i> Book Doctor Consultation Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER (ONLY PLACE WHERE ADDRESS APPEARS) -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <a href="index.html" class="brand-logo" style="margin-bottom: 16px; display: inline-block;">
+                        <img src="assets/images/logo.png" alt="Hospital Logo" width="34" height="42" style="height: 42px; width: auto; object-fit: contain;">
+                    </a>
+                    <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; line-height: 1.7; margin-bottom: 20px;">
+                        A tertiary super specialty healthcare institute committed to clinical precision, NABH & JCI quality standards, and compassionate patient healing across Tamil Nadu.
+                    </p>
+                    <div class="social-links">
+                        <a href="404.html" class="social-icon linkedin" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="404.html" class="social-icon instagram" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="404.html" class="social-icon twitter" title="X (Twitter)" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="404.html" class="social-icon youtube" title="YouTube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Clinical Specialties</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Cardiology & Heart Surgery</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Neurology & Stroke Unit</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Orthopedics & Robotic Knee</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Pediatrics & Level III NICU</a></li>
+                        <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Medical Oncology</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Patient Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="doctors.html"><i class="fa-solid fa-chevron-right"></i> Find a Specialist Doctor</a></li>
+                        <li><a href="get-started.html"><i class="fa-solid fa-chevron-right"></i> Get Started</a></li>
+                        <li><a href="health-packages.html"><i class="fa-solid fa-chevron-right"></i> Health Checkup Packages</a></li>
+                        <li><a href="signin.html"><i class="fa-solid fa-chevron-right"></i> Patient Medical Records</a></li>
+                        <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Emergency Ambulance Desk</a></li>
+                    </ul>
+                </div>
+
+                <!-- ADDRESS ONLY IN FOOTER -->
+                <div class="footer-col footer-newsletter">
+                    <h4>Hospital Location & Desk</h4>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot" style="color: #38bdf8;"></i>
+                            <span>45 Meyyanur Bypass Road, Near New Bus Stand, Salem - 636004, Tamil Nadu, India</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-truck-medical" style="color: #ef4444;"></i>
+                            <span>24/7 Emergency: +91 98400 55500</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone" style="color: #38bdf8;"></i>
+                            <span>Appointments: +91 (0427) 244-0199</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope" style="color: #38bdf8;"></i>
+                            <span>care@stacklyhospital.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Super Specialty Hospital, Salem, Tamil Nadu, India. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Patient Rights</a>
+                    <a href="404.html">Cashless TPA</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="back-to-top-btn" title="Back to Top" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="data/hospital-data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
